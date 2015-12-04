@@ -1,0 +1,5 @@
+.footer {
+  @include breakpoint('phone') {
+    font-size: 13px;
+  }
+}

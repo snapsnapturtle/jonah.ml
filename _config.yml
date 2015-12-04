@@ -1,8 +1,9 @@
 # Site settings
 title: Jonah.
+author: Jonah Möller
 email: jonah.moeller@gmail.com
 description: My name is Jonah Möller and I'm a passionate Web Developer from Hamburg; I enjoy delivering bespoke applications and websites to fit a client's needs.
-github_username:  snapsnapturtle
+github_username: snapsnapturtle
 
 # Build settings
 markdown: kramdown
