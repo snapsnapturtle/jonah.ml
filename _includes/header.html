@@ -1,20 +1,19 @@
 <header class="header">
 
 	<div class="main">
-		<a class="site-title" href="{{ site.baseurl }}/">{{ site.author }}</a>
+		<!--
+		<img class="logo" src="/assets/small-icon.png" width="64" height="64">-->
 
-		<nav class="site-nav">
-			<a href="#" class="menu-icon">
-				m
-			</a>
+		<div class="header-content">
+			<a class="site-title" href="{{ site.baseurl }}/">{{ site.author }}</a>
 
-			<div class="static-pages">
-				{% for page in site.pages %}
-					{% if page.title %}
-						<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-					{% endif %}
-				{% endfor %}
-			</div>
-		</nav>
+			<nav class="site-nav">
+				<div class="static-pages">
+					<a class="page-link" href="{{ '/' | prepend: site.baseurl }}">Home</a>
+					<a class="page-link" href="{{ '/projects/' | prepend: site.baseurl }}">Projects</a>
+					<a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">About</a>
+				</div>
+			</nav>
+		</div>
 	</div>
 </header>

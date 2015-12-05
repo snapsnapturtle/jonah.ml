@@ -1,25 +1,43 @@
 .footer {
-  background: #0e153a;
-  background: -moz-linear-gradient(-45deg, #a18cab 0%, #0e153a 100%);
-  background: -webkit-linear-gradient(-45deg, #a18cab 0%, #0e153a 100%);
-  background: linear-gradient(135deg, #a18cab 0%, #0e153a 100%);
+  background-color: #0e153a;
+  background-image: -o-linear-gradient(-40deg, #a18cab 10%, #0e153a 90%);
+  background-image: -moz-linear-gradient(-40deg, #a18cab 10%, #0e153a 90%);
+  background-image: -webkit-linear-gradient(-40deg, #a18cab 10%, #0e153a 90%);
+  background-image: linear-gradient(130deg, #a18cab 10%, #0e153a 90%);
+
+  &.daytime {
+    background-color: #bee1c4;
+    background-image: -moz-linear-gradient(-40deg, #5d7883 10%, #1e2a44 90%);
+    background-image: -webkit-linear-gradient(-40deg, #5d7883 10%, #1e2a44 90%);
+    background-image: linear-gradient(130deg, #5d7883 10%, #1e2a44 90%);
+  }
 
   .main {
     text-align: center;
 
     @include breakpoint('phone') {
-      font-size: 13px;
+      font-size: 14px;
     }
 
     * {
       color: $whiteColor;
     }
 
-    .github {
+    .links {
       margin-bottom: 10px;
+
+      @include breakpoint('phone') {
+        margin-bottom: 5px;
+      }
       
-      a {
+      .svg-link {
         text-decoration: none;
+        margin-left: 5px;
+
+        &:first-of-type {
+          margin-left: 0;
+
+        }
 
         svg {
           width: 16px;
@@ -27,17 +45,10 @@
           vertical-align: middle;
         }
 
-        .username {
+        .title {
           vertical-align: middle;
         }
       }
     }
   }
-}
-
-.daytime {
-  background: #bee1c4;
-  background: -moz-linear-gradient(-45deg, #bee1c4 0%, #5d7883 47%, #1e2a44 100%);
-  background: -webkit-linear-gradient(-45deg, #bee1c4 0%, #5d7883 47%, #1e2a44 100%);
-  background: linear-gradient(135deg, #bee1c4 0%, #5d7883 47%, #1e2a44 100%);
 }
