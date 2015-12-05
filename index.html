@@ -4,20 +4,17 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+	<ul class="post-list">
+		{% for post in site.posts %}
+			<li>
+				<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+					<h2>
+						{{ post.title }}
+					</h2>
+					<span class="post-meta">{% assign d = post.date | date: "%-d" %}{{ post.date | date: "%B" }} {% case d %}{% when '1' or '21' or '31' %}{{ d }}t{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, {{ post.date | date: "%Y" }}</span>
+					<div class="post-foreword">{{ post.description }}</div>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
 </div>

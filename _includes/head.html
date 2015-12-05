@@ -1,24 +1,15 @@
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <title>
-        {% if page.title %}
-            {{ page.title }}
-        {% else %}
-            {{ site.title }}
-        {% endif %}
-    </title>
-
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="Jonah Möller">
-    <meta name="keywords" content="developer, hamburg, challenge, protofolio, jonah, möller, jonah möller"/>
+    <meta name="keywords" content="developer, hamburg, challenge, protofolio, jonah, möller"/>
 
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
 
     <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}"/>
+    <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}"/>
     <meta property="og:description" content="{{ page.description }}"/>
     {% if site.type %}<meta property="og:type" content="{{ page.type }}"/>{% endif %}
     <meta name="twitter:card" value="{{ page.description }}">

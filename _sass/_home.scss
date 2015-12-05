@@ -1,0 +1,17 @@
+.post-list {
+  list-style: none;
+
+  .post-link {
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  a:hover {
+    color: $darkerColor;
+  }
+
+  h2 {
+    margin-bottom: -3px;
+  }
+}
