@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
 
     <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:url" content="{{ page.url }}"/>
+    <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}"/>
     <meta property="og:description" content="{{ page.description }}"/>
     {% if site.type %}<meta property="og:type" content="{{ page.type }}"/>{% endif %}
     <meta name="twitter:card" value="{{ page.description }}">

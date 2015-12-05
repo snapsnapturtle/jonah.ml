@@ -3,7 +3,7 @@ layout: post
 title:  "Partial CSS Borders"
 date:   2015-09-24 20:54:19
 description: There is no such thing as border-length in CSS, which would have made this really easy to do
-type : article
+type: article
 ---
 
 There is no such thing as border-length in CSS, which would have made this really easy to do. But anyway, 
