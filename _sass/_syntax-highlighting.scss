@@ -1,8 +1,16 @@
-/**
- * Syntax highlighting styles
- */
+code {
+    background-color: #eeeeee;
+    font-size: 85%;
+    padding: 2px;
+}
+
+
 .highlight {
-    background: #fff;
+    background-color: #eeeeee;
+    overflow: auto;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px 0;
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
