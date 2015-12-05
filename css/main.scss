@@ -29,12 +29,12 @@ $titleFont: 'myriad-pro', arial, sans-serif;
 $monoSpaceFont: Consolas, Monaco, 'Andale Mono', monospace;
 
 /* Colours */
+$darkerColor: #212124;
 $secondaryColor: #4B4B4B;
 $secondGreyColor: #666666;
 $hoverColor: #969595;
 $lightColor: #F3F5F6;
 $whiteColor: #FFFFFF;
-$darkerColor: #212124;
 $darkColor: #000000;
 
 $menuBackground: #53788C;
@@ -76,5 +76,6 @@ $bounceTransition: transform $defaultTransitionTime cubic-bezier(0.175, 0.885, 0
 @import "../_sass/reset";
 @import "../_sass/base";
 @import "../_sass/layout";
+@import "../_sass/header";
 @import "../_sass/footer";
 @import "../_sass/syntax-highlighting";

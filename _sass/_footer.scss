@@ -1,5 +1,43 @@
 .footer {
-  @include breakpoint('phone') {
-    font-size: 13px;
+  background: #0e153a;
+  background: -moz-linear-gradient(-45deg, #a18cab 0%, #0e153a 100%);
+  background: -webkit-linear-gradient(-45deg, #a18cab 0%, #0e153a 100%);
+  background: linear-gradient(135deg, #a18cab 0%, #0e153a 100%);
+
+  .main {
+    text-align: center;
+
+    @include breakpoint('phone') {
+      font-size: 13px;
+    }
+
+    * {
+      color: $whiteColor;
+    }
+
+    .github {
+      margin-bottom: 10px;
+      
+      a {
+        text-decoration: none;
+
+        svg {
+          width: 16px;
+          height: 16px;
+          vertical-align: middle;
+        }
+
+        .username {
+          vertical-align: middle;
+        }
+      }
+    }
   }
+}
+
+.daytime {
+  background: #bee1c4;
+  background: -moz-linear-gradient(-45deg, #bee1c4 0%, #5d7883 47%, #1e2a44 100%);
+  background: -webkit-linear-gradient(-45deg, #bee1c4 0%, #5d7883 47%, #1e2a44 100%);
+  background: linear-gradient(135deg, #bee1c4 0%, #5d7883 47%, #1e2a44 100%);
 }

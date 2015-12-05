@@ -7,3 +7,6 @@ github_username: snapsnapturtle
 
 # Build settings
 markdown: kramdown
+
+sass:
+  style: compressed

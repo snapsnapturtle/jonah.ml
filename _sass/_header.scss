@@ -1,0 +1,15 @@
+.header {
+  background-color: #a18cab;
+  background-image: -o-linear-gradient(-40deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #D4A9BE 90%);
+  background-image: -moz-linear-gradient(-40deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #D4A9BE 90%);
+  background-image: -ms-linear-gradient(-40deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #D4A9BE 90%);
+  background-image: linear-gradient(-130deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #D4A9BE 90%);
+
+  .main {
+    .site-title {
+      color: $whiteColor;
+      text-decoration: none;
+      font-size: 22px;
+    }
+  }
+}
