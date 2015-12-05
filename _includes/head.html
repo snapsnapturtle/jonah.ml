@@ -17,11 +17,11 @@
 
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
 
-    <meta property="og:title" content="{{ site.title }}"/>
-    <meta property="og:url" content="{{ site.url }}"/>
-    <meta property="og:description" content="{{ site.description }}"/>
-    {% if site.type %}<meta property="og:type" content="{{ site.type }}"/>{% endif %}
-    <meta name="twitter:card" value="{{ site.description }}">
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:url" content="{{ page.url }}"/>
+    <meta property="og:description" content="{{ page.description }}"/>
+    {% if site.type %}<meta property="og:type" content="{{ page.type }}"/>{% endif %}
+    <meta name="twitter:card" value="{{ page.description }}">
 
     <link rel="icon" href="images/server/favicon.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="images/server/apple-icon.png" sizes="180x180">
