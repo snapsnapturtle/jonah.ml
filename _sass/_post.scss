@@ -1,0 +1,19 @@
+.post-header {
+  .post-meta {
+    color: $hoverColor;
+    font-size: 14px;
+    position: relative;
+    margin-top: -5px;
+    margin-bottom: 20px;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 35px;
+      bottom: -4px;
+      left: 0;
+      border: 1px solid grey;
+    }
+  }
+}
