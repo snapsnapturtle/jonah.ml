@@ -1,8 +1,8 @@
-.post-meta {
+body p.post-meta {
   color: $hoverColor;
-  font-size: 14px;
+  font-size: 15px;
   position: relative;
-  margin-top: -5px;
+  margin-top: -10px;
   margin-bottom: 20px;
 }
 
@@ -15,5 +15,9 @@
     bottom: -4px;
     left: 0;
     border: 1px solid grey;
+  }
+
+  h1 {
+    margin-bottom: 15px;
   }
 }

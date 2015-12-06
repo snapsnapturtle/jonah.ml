@@ -3,17 +3,15 @@ layout: page
 title: Imprint
 permalink: /imprint/
 ---
-
-#Impressum
  
 **Jonah Möller**<br>
 E-Mail: <a href="mailto:hello@jonah.ml">hello@jonah.ml</a><br>
 Website: <a href="//jonah.ml">http://jonah.ml/</a><br>
 
 
-##Disclaimer – rechtliche Hinweise
+##Rechtliche Hinweise
 
-§ 1 Haftungsbeschränkung
+####Haftungsbeschränkung
 
 Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. Der Anbieter übernimmt jedoch keine 
 Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der 
@@ -22,7 +20,7 @@ Meinung des jeweiligen Autors und nicht immer die Meinung des Anbieters wieder. 
 Website des Anbieters kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und dem Anbieter zustande.
 
 
-§ 2 Externe Links
+####Externe Links
 
 Diese Website enthält Verknüpfungen zu Websites Dritter ("externe Links"). Diese Websites unterliegen der 
 Haftung der jeweiligen Betreiber. Der Anbieter hat bei der erstmaligen Verknüpfung der externen Links die 
@@ -34,7 +32,7 @@ externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße
 Kenntnis von Rechtsverstößen werden jedoch derartige externe Links unverzüglich gelöscht.
 
 
-§ 3 Urheber- und Leistungsschutzrechte
+####Urheber- und Leistungsschutzrechte
 
 Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheber- und Leistungsschutzrecht. 
 Jede vom deutschen Urheber- und Leistungsschutzrecht nicht zugelassene Verwertung bedarf der vorherigen 
@@ -47,14 +45,14 @@ privaten und nicht kommerziellen Gebrauch ist erlaubt.<br><br> Die Darstellung d
 ist nur mit schriftlicher Erlaubnis zulässig.
 
 
-§ 4 Besondere Nutzungsbedingungen
+####Besondere Nutzungsbedingungen
 
 Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorgenannten Paragraphen abweichen, 
 wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im jeweiligen Einzelfall 
 die besonderen Nutzungsbedingungen.
 
 
-##Datenschutzerklärung
+## Datenschutzerklärung
 
 Nachfolgend möchten wir Sie über unsere Datenschutzerklärung informieren. Sie finden hier Informationen 
 über die Erhebung und Verwendung persönlicher Daten bei der Nutzung unserer Webseite. Wir beachten dabei das für 

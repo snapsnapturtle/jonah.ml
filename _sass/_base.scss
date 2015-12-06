@@ -9,14 +9,22 @@ html, body {
     color: $darkColor;
     font-family: $titleFont;
     font-weight: 400;
-    margin-bottom: 15px;
   }
 
-  p {
+  h2 {
+    font-size: 24px;
+  }
+
+  h4, h5, h6 {
+    text-transform: uppercase;
+  }
+
+  p, ul, ol {
     color: $darkerColor;
     font-family: $regularFont;
     font-size: 17px;
     line-height: 130%;
+    margin-bottom: 15px;
 
     @include breakpoint('phone') {
       font-size: 16px;
@@ -24,6 +32,10 @@ html, body {
 
     @include breakpoint('watch') {
       font-size: 14px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 

@@ -1,9 +1,16 @@
 .post-list {
   list-style: none;
 
+  li {
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
   .post-link {
     text-decoration: none;
-    margin-bottom: 30px;
     display: block;
   }
 
@@ -12,6 +19,6 @@
   }
 
   h2 {
-    margin-bottom: -3px;
+    margin-bottom: 2px;
   }
 }

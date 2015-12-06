@@ -9,6 +9,18 @@
 	</section>
 
 	{% include footer.html %}
+<script>
+	var hour = (new Date()).getHours();
+
+	if(hour < 20 && hour > 9) {
+		setStyleDaytime(document.getElementById('header'));
+		setStyleDaytime(document.getElementById('footer'));
+	}
+
+	function setStyleDaytime(element) {
+		element.className += ' daytime';
+	}
+</script>
 </body>
 </html>
 <script>
