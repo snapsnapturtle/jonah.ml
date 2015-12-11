@@ -15,6 +15,11 @@
 	if(hour < 20 && hour > 9) {
 		setStyleDaytime(document.getElementById('header'));
 		setStyleDaytime(document.getElementById('footer'));
+
+		var headlines = document.querySelectorAll('.post-list h2');
+		for(var i = 0; i < headlines.length; i++){
+			setStyleDaytime(headlines[i]);
+		}
 	}
 
 	function setStyleDaytime(element) {

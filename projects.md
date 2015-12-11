@@ -10,7 +10,6 @@ permalink: /projects/
 			<li>
 				<a class="post-link" href="{{ project.url | prepend: site.baseurl }}">
 					<h2>{{ project.title }}</h2>
-					<span class="post-meta">{{ project.language }}</span>
 					<div class="post-foreword">{{ project.description }}</div>
 				</a>
 			</li>

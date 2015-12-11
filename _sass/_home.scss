@@ -1,11 +1,13 @@
+@import "settings";
+
 .post-list {
   list-style: none;
 
   li {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 
     &:last-of-type {
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
   }
 
@@ -14,11 +16,43 @@
     display: block;
   }
 
+  .post-meta {
+    color: $hoverColor;
+    font-size: 16px;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 35px;
+      bottom: -4px;
+      left: 0;
+      border: 1px solid $hoverColor;
+    }
+
+  }
+
+  .post-foreword {
+    color: #2a2a2a;
+    margin-top: 10px;
+  }
+
   a:hover {
     color: $darkerColor;
   }
 
   h2 {
     margin-bottom: 2px;
+    font-size: 24px;
+    color: darken(#a18cab, 60%);
+
+    @include breakpoint('phone') {
+      font-size: 22px;
+    }
+
+    &.daytime {
+      color: darken(#bee1c4, 60%);
+    }
   }
 }

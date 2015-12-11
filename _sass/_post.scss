@@ -1,23 +1,24 @@
-body p.post-meta {
-  color: $hoverColor;
-  font-size: 15px;
-  position: relative;
-  margin-top: -10px;
-  margin-bottom: 20px;
-}
+@import "settings";
 
 .post-header {
-  .post-meta:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 35px;
-    bottom: -4px;
-    left: 0;
-    border: 1px solid grey;
-  }
+  .post-meta {
+    color: $hoverColor;
+    font-size: 15px;
+    position: relative;
+    margin-bottom: 20px;
 
-  h1 {
-    margin-bottom: 15px;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 35px;
+      bottom: -4px;
+      left: 0;
+      border: 1px solid grey;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
   }
 }
