@@ -1,4 +1,5 @@
 @import "settings";
+@import "colours/functions";
 
 * {
   box-sizing: border-box;
@@ -8,7 +9,7 @@ html, body {
   font-family: $regularFont;
 
   h1, h2, h3, h4, h5, h6 {
-    color: $darkColor;
+    color: color(grey, x-dark);
     font-family: $titleFont;
     font-weight: 400;
   }
@@ -18,7 +19,7 @@ html, body {
   }
 
   p, ul, ol {
-    color: $darkerColor;
+    color: color(grey, dark);
     font-family: $regularFont;
     font-size: 17px;
     line-height: 130%;
@@ -42,18 +43,19 @@ html, body {
   }
 
   a {
-    color: $secondaryColor;
+    color: color(red);
     cursor: pointer;
     font-family: $regularFont;
-    transition: color 0.3s;
+    text-decoration: none;
+    transition: color 100ms ease-in;
 
     &.active, &:hover, &.selected {
-      color: $hoverColor;
+      color: color(red, 0.6);
     }
   }
 }
 
 ::selection {
-  color: $whiteColor;
-  background-color: #4a4c7b;
+  color: color(white);
+  background-color: color(red);
 }

@@ -1,4 +1,5 @@
 @import "settings";
+@import "colours/functions";
 
 form {
   width: 100%;
@@ -8,8 +9,8 @@ form {
   }
 
   input, textarea {
-    background-color: $white;
-    border: 2px solid darken($color-light, 20%);
+    background-color: color(white);
+    border: 2px solid darken(color(grey, x-light), 20%);
     border-radius: 0;
     box-shadow: 0;
     box-sizing: border-box;
@@ -18,12 +19,11 @@ form {
     outline: none;
     padding: 10px;
     width: 100%;
-    transition: border $defaultTransitionTime, color $defaultTransitionTime;
     -webkit-appearance: none;
 
     &:focus {
       border: 2px solid darken(#cccccc, 30%);
-      color: $black;
+      color: color(black);
     }
 
     @include breakpoint(phone) {
@@ -38,20 +38,18 @@ form {
   }
 
   button {
-    background: $white;
-    border: 2px solid darken($color-light, 20%);
-    color: $black;
+    background: color(white);
+    border: 2px solid darken(color(grey, x-light), 20%);
+    color: color(black);
     font-family: $regularFont;
     font-size: 16px;
     margin-top: 10px;
     outline: none;
     padding: 8px 18px;
     text-align: center;
-    transition: border $defaultTransitionTime;
 
     @include breakpoint(desktop) {
       &:hover {
-        border-color: $hoverColor;
         cursor: pointer;
       }
     }

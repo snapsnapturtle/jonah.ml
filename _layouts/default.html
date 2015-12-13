@@ -9,35 +9,6 @@
 	</section>
 
 	{% include footer.html %}
-<script>
-	var hour = (new Date()).getHours();
-
-	if(hour < 20 && hour > 9) {
-		setStyleDaytime(document.getElementById('header'));
-		setStyleDaytime(document.getElementById('footer'));
-
-		var headlines = document.querySelectorAll('.post-list h2');
-		for(var i = 0; i < headlines.length; i++){
-			setStyleDaytime(headlines[i]);
-		}
-	}
-
-	function setStyleDaytime(element) {
-		element.className += ' daytime';
-	}
-</script>
 </body>
 </html>
-<script>
-	var cb = function () {
-		var l = document.createElement('link');
-		l.rel = 'stylesheet';
-		l.href = '{{ "/assets/fonts.css" | prepend: site.baseurl }}';
-		var h = document.getElementsByTagName('head')[0];
-		h.parentNode.insertBefore(l, h);
-	};
-	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-					webkitRequestAnimationFrame || msRequestAnimationFrame;
-	if (raf) raf(cb);
-	else window.addEventListener('load', cb);
-</script>
+<link rel="stylesheet"  href="{{ "/assets/fonts.css" | prepend: site.baseurl }}">

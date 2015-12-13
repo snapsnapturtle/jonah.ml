@@ -1,8 +1,9 @@
 @import "settings";
+@import "colours/functions";
 
 .post-header {
   .post-meta {
-    color: $hoverColor;
+    color: color(grey, light);
     font-size: 15px;
     position: relative;
     margin-bottom: 20px;

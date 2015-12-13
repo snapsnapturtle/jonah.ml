@@ -3,19 +3,19 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="author" content="Jonah Möller">
-    <meta name="keywords" content="developer, hamburg, challenge, protofolio, jonah, möller"/>
-
+    <meta name="author" content="{{ site.author }}">
+    <meta name="robots" content="noodp,noydir">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
 
-    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
     <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}"/>
-    <meta property="og:description" content="{{ page.description }}"/>
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
     {% if site.type %}<meta property="og:type" content="{{ page.type }}"/>{% endif %}
-    <meta name="twitter:card" value="{{ page.description }}">
+    <meta name="twitter:card" value="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="icon" href="images/server/favicon.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="images/server/apple-icon.png" sizes="180x180">
+    <link rel="alternate" type="application/atom+xml" title="Recent notes" href="/feed.xml">
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
