@@ -2,7 +2,6 @@
 
 code {
     font-size: 85%;
-    padding: 2px;
     background-color: #fcfcfc;
 }
 
@@ -11,8 +10,8 @@ code {
     background-color: #fcfcfc;
     overflow: auto;
     padding: 10px;
-    font-size: 15px;
     margin: 10px 0;
+    font-size: 15px;
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
