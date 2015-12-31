@@ -1,21 +1,19 @@
 @import "settings";
 @import "colours/functions";
 
-.post-header {
-  .post-meta {
-    color: color(grey, light);
-    font-size: 15px;
-    position: relative;
-    margin-bottom: 20px;
+.post {
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+  }
 
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 35px;
-      bottom: -4px;
-      left: 0;
-      border: 1px solid grey;
+  .post-header {
+    .post-meta {
+      color: color(grey);
+      font-size: 15px;
+      position: relative;
+      margin-bottom: 25px;
+      margin-top: 5px;
     }
   }
 }

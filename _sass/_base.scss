@@ -17,7 +17,6 @@ html, body {
   h2 {
     margin-top: 20px;
     margin-bottom: 5px;
-    border-bottom: 1px solid color(grey, 0.2);
   }
 
   h4, h5, h6 {
@@ -77,9 +76,13 @@ html, body {
     }
 
     tbody {
+      tr {
+        border-bottom: 1px solid #ececec;
+      }
+
       td {
         padding: 2px 10px;
-        font-size: 85%;
+        font-size: 90%;
       }
     }
   }

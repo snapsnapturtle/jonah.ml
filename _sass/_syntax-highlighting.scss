@@ -2,12 +2,14 @@
 
 code {
     font-size: 85%;
-    background-color: #fcfcfc;
+    //background-color: #fcfcfc;
 }
 
 .highlight {
-    border: 1px solid #ececec;
-    background-color: #fcfcfc;
+    //border: 1px solid #ececec;
+    //background-color: #fcfcfc;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
     overflow: auto;
     padding: 10px;
     margin: 10px 0;

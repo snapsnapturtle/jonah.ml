@@ -18,25 +18,13 @@
   }
 
   .post-meta {
-    color: color(grey);
+    color: color(grey, 0.8);
     font-size: 16px;
     position: relative;
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 35px;
-      bottom: -4px;
-      left: 0;
-      border: 1px solid color(grey);
-    }
-
   }
 
   .post-foreword {
     color: #2a2a2a;
-    margin-top: 10px;
   }
 
   a:hover {
