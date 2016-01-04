@@ -82,34 +82,6 @@ OR (above tag and below two tags- both are same)
 {% endhighlight %}
 
 
-
-##More than one meta robots tag?
-We should use it only once per page and its the best practice, but sometimes because of combination of 
-SEO friendly themes and SEO plugins, we may have multiple instances of such tags. So for such cases lets 
-discuss how spiders (or crawlers) would interpret it.
-
-**CASE 1: No conflict values in robots meta tag.**
-
-{% highlight html %}
-<meta name="robots" content="noindex" />
-<meta name="robots" content="nofollow" />
-{% endhighlight %}
-
-Above two tags would be taken same as: <meta name="robots" content="noindex, nofollow" />
-
-**CASE 2: Conflicts value present in robots meta tag.**
-
-First instance: {% highlight html %}<meta name="robots" content="noindex" />{% endhighlight %}
-
-Second instance: {% highlight html %}<meta name="robots" content="index" />{% endhighlight %}
-
-In this case both values are conflicting as one tell to noindex and other is enforcing spider 
-to index the page. For such cases crawlers considers first instance of conflicts.
-
-So search engine bot would take it as {% highlight html %}<meta name="robots" content="noindex" />
-{% endhighlight %} because noindex encountres before than index one.
-
-
 ##Blocking a specific Bot
 By specifying meta name as “robots”,you are actually blocking all search engine robots. However if you want to block specific search engine bot then you can specify bot name instead of “robots”
 
