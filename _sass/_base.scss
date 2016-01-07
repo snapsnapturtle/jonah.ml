@@ -1,6 +1,8 @@
 @import "settings";
 @import "colours/functions";
 
+$color-accent: color(blue, x-dark);
+
 * {
   box-sizing: border-box;
 }
@@ -47,14 +49,14 @@ html, body {
   }
 
   a {
-    color: color(red);
+    color: $color-accent;
     cursor: pointer;
     font-family: $regularFont;
     text-decoration: none;
     transition: color 100ms ease-in;
 
     &.active, &:hover, &.selected {
-      color: color(red, 0.6);
+      color: lighten($color-accent, 20%);
     }
   }
 
@@ -89,5 +91,5 @@ html, body {
 
 ::selection {
   color: color(white);
-  background-color: color(red);
+  background-color: $color-accent;
 }

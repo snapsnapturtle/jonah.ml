@@ -1,4 +1,5 @@
 @import "settings";
+@import "base";
 @import "colours/functions";
 
 .header {
@@ -10,7 +11,7 @@
 
       .site-title {
         color: color(white);
-        background: color(red);
+        background: $color-accent;
         text-decoration: none;
         font-size: 23px;
         padding: 1px 7px 2px 7px;
@@ -25,7 +26,7 @@
         }
 
         &:hover {
-          background-color: color(red, 0.7);
+          background-color: lighten($color-accent, 10%);
         }
       }
 
@@ -49,7 +50,7 @@
             padding-right: 10px;
 
             &:hover {
-              color: color(red)
+              color: $color-accent;
             }
           }
         }
