@@ -11,7 +11,6 @@
     <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}"/>
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
     {% if site.type %}<meta property="og:type" content="{{ page.type }}"/>{% endif %}
-    <meta name="twitter:card" value="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="icon" href="{{ "/assets/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="{{ "/assets/apple-touch-icon.png" | prepend: site.baseurl }}" sizes="256x256"/>
