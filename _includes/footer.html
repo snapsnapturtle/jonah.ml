@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" property="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 <footer class="footer" id="footer">
 	<div class="main">
 		<div class="footer-content">
@@ -14,7 +14,7 @@
 		</div>
 	</div>
 	<script>
-						document.addEventListener('DOMContentLoaded', function () {
+		document.addEventListener('DOMContentLoaded', function () {
 			var el = document.getElementById('footer-email');
 			var address = ['jonah.moeller', 'gmail.com'].join('@');
 			el.href = 'mailto:' + address;
@@ -22,3 +22,4 @@
 		});
 	</script>
 </footer>
+<link rel="stylesheet" href="{{ "/assets/fonts.css" | prepend: site.baseurl }}">
