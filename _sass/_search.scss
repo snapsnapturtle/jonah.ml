@@ -1,0 +1,25 @@
+@import "settings";
+@import "colours/functions";
+
+#search-query {
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+  font-size: 24px;
+  font-weight: lighter;
+  font-family: $regularFont;
+  text-transform: lowercase;
+  padding-bottom: 5px;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 2px solid color(grey, light);
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#search-results {
+  margin: 20px;
+}
