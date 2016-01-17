@@ -2,19 +2,12 @@
 @import "colours/functions";
 
 .post {
-  h2 {
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 22px;
-  }
-
   .post-header {
     .post-meta {
       color: color(grey);
       font-size: 15px;
       position: relative;
-      margin-bottom: 25px;
-      margin-top: 5px;
+      margin-bottom: 20px;
     }
   }
 }

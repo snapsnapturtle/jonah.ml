@@ -3,6 +3,8 @@
 @import "colours/functions";
 
 .header {
+  background: $color-accent;
+
   .main {
     clear: both;
 
@@ -11,22 +13,17 @@
 
       .site-title {
         color: color(white);
-        background: $color-accent;
         text-decoration: none;
-        font-size: 23px;
-        padding: 1px 7px 2px 7px;
-        border-radius: 3px;
-        transition: color 0.2s, background-color 0.2s;
+        font-size: 22px;
+        transition: color 0.2s;
         display: inline-block;
 
-
         @include breakpoint('phone') {
-          font-size: 21px;
-          padding: 3px 7px 2px 5px;
+          font-size: 20px;
         }
 
         &:hover {
-          background-color: lighten($color-accent, 10%);
+          color: lighten($color-accent, 35%);
         }
       }
 
@@ -36,16 +33,20 @@
 
         .static-pages {
           a {
+            color: color(white);
             font-size: 14px;
             text-transform: uppercase;
             text-decoration: none;
-            font-weight: bolder;
-            color: color(gray);
-            padding-right: 10px;
+            margin-right: 5px;
+            padding: 2px 5px;
             transition: color 0.2s;
 
+            &:last-of-type {
+              margin-right: 0;
+            }
+
             &:hover {
-              color: $color-accent;
+              color: lighten($color-accent, 35%);
             }
           }
         }

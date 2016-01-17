@@ -13,11 +13,14 @@ html, body {
   h1, h2, h3, h4, h5, h6 {
     color: color(grey, x-dark);
     font-family: $titleFont;
-    font-weight: 400;
-  }
+    font-weight: normal;
+    font-size: 24px;
 
-  h2 {
-    margin-bottom: 5px;
+    @include breakpoint('phone') {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: bold;
+    }
   }
 
   h4, h5, h6 {
@@ -29,7 +32,7 @@ html, body {
     font-family: $regularFont;
     font-size: 17px;
     line-height: 130%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     @include breakpoint('phone') {
       font-size: 16px;
@@ -91,5 +94,5 @@ html, body {
 
 ::selection {
   color: color(white);
-  background-color: $color-accent;
+  background-color: color(grey, x-dark);
 }

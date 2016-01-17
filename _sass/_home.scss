@@ -8,6 +8,10 @@
   li {
     margin-bottom: 30px;
 
+    @include breakpoint('phone') {
+      margin-bottom: 10px;
+    }
+
     &:last-of-type {
       margin-bottom: 10px;
     }
@@ -18,10 +22,8 @@
     display: block;
 
     &:hover {
-      h2 {
-        transition: color 0.2s;
-        color: $color-accent;
-      }
+      transition: opacity 0.2s;
+      opacity: 0.7;
     }
   }
 
@@ -33,18 +35,5 @@
 
   .post-foreword {
     color: #2a2a2a;
-  }
-
-  a:hover {
-    color: color(grey, dark);
-  }
-
-  h2 {
-    margin-bottom: 2px;
-    font-size: 24px;
-
-    @include breakpoint('phone') {
-      font-size: 22px;
-    }
   }
 }
