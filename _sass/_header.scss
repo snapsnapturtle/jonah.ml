@@ -34,12 +34,6 @@
         float: right;
         margin-top: 5px;
 
-        @include breakpoint('phone') {
-          display: block;
-          margin-top: 10px;
-          float: none;
-        }
-
         .static-pages {
           a {
             font-size: 14px;
@@ -48,6 +42,7 @@
             font-weight: bolder;
             color: color(gray);
             padding-right: 10px;
+            transition: color 0.2s;
 
             &:hover {
               color: $color-accent;

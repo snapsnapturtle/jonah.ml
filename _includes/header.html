@@ -1,14 +1,11 @@
 <header class="header" id="header">
-
 	<div class="main">
 		<div class="header-content">
-			<a class="site-title" href="{{ site.baseurl }}/">{{ site.author }}</a>
-
+			<a class="site-title" href="{{ '/' | prepend: site.baseurl }}">{{ site.author }}</a>
 			<nav class="site-nav">
 				<div class="static-pages">
-					<a class="page-link" href="{{ '/' | prepend: site.baseurl }}">Home</a>
-					<a class="page-link" href="{{ '/projects/' | prepend: site.baseurl }}">Projects</a>
 					<a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">About</a>
+					<a class="page-link" href="https://github.com/snapsnapturtle">GitHub</a>
 				</div>
 			</nav>
 		</div>

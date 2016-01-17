@@ -4,7 +4,7 @@
 		<div class="footer-content">
 			<div class="left">
 				Questions or Comments?<br>
-				<a id="footer-email"></a>
+				<a id="footer-email" href="mailto:jonah.moeller+jonahml@googlemail.com">jonah.moeller@googlemail.com</a>
 			</div>
 			<div class="right">
 				<a href="https://github.com/{{ site.github_username }}" target="_blank"
@@ -13,13 +13,5 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var el = document.getElementById('footer-email');
-			var address = ['jonah.moeller', 'gmail.com'].join('@');
-			el.href = 'mailto:' + address;
-			el.innerHTML = address;
-		});
-	</script>
 </footer>
 <link rel="stylesheet" property="stylesheet" href="{{ "/assets/fonts.css" | prepend: site.baseurl }}">
