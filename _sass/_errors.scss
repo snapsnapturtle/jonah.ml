@@ -1,0 +1,17 @@
+@import "settings";
+
+.error {
+  font-family: $monoSpaceFontAlternative;
+  text-align: center;
+  padding-top: 45px;
+
+  h1 {
+    font-family: $monoSpaceFontAlternative;
+    font-size: 34px;
+    margin-bottom: 15px;
+
+    @include breakpoint('phone') {
+      font-size: 28px;
+    }
+  }
+}

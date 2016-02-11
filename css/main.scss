@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+
 ---
 
 @import "../_sass/reset";
@@ -10,4 +10,5 @@
 @import "../_sass/home";
 @import "../_sass/post";
 @import "../_sass/search";
+@import "../_sass/errors";
 @import "../_sass/syntax-highlighting";
