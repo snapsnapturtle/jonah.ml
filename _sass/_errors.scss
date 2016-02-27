@@ -1,13 +1,13 @@
 @import "settings";
 
 .error {
-  font-family: $monoSpaceFont;
+  font-family: $regularFont;
   text-align: center;
   padding-top: 45px;
 
   h1 {
-    font-family: $monoSpaceFont;
-    font-size: 34px;
+    font-family: $titleFont;
+    font-size: 25px;
     margin-bottom: 15px;
 
     @include breakpoint('phone') {
