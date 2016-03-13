@@ -4,7 +4,7 @@
 
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
-    <meta name="robots" content="noodp,noydir">
+    <meta name="robots" content="noodp, noydir">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
 
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
@@ -17,34 +17,29 @@
     <link rel="alternate" type="application/atom+xml" title="Recent notes" href="/feed.xml">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script>var isModernBrowser = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);</script>
     <script>
-        var md5 = '89dc3b148bf42437e00ee344d52b3866',
-            key = 'font',
-            cache;
+	    var md5 = '89dc3b148bf42437e00ee344d52b3866', key = 'font', cache;
 
-    function insertFont(value) {
-        var style = document.createElement('style');
-        style.innerHTML = value;
-        document.head.appendChild(style);
-    }
+	    function insertFont(value) {
+		    var style = document.createElement('style');
+		    style.innerHTML = value;
+		    document.head.appendChild(style);
+	    }
 
-    // PRE-RENDER
-    try {
-        cache = window.localStorage.getItem(key);
-        if (cache) {
-            cache = JSON.parse(cache);
-            if (cache.md5 == md5) {
-                insertFont(cache.value);
-            } else {
-                // Busting cache when md5 doesn't match
-                window.localStorage.removeItem(key);
-                cache = null;
-            }
-        }
-    } catch (e) {
-        // Most likely LocalStorage disabled
-    }
+	    try {
+		    cache = window.localStorage.getItem(key);
+		    if(cache) {
+			    cache = JSON.parse(cache);
+			    if(cache.md5 == md5) {
+				    insertFont(cache.value);
+			    } else {
+				    window.localStorage.removeItem(key);
+				    cache = null;
+			    }
+		    }
+	    } catch(e) {
+		    console.warn(e);
+	    }
     </script>
     <link rel="stylesheet" property="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 </head>

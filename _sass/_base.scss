@@ -17,9 +17,17 @@ html, body {
     font-size: 24px;
 
     @include breakpoint('phone') {
-      font-size: 20px;
+      font-size: 22px;
       line-height: 30px;
       font-weight: bold;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+
+    @include breakpoint('phone') {
+      font-size: 20px;
     }
   }
 
@@ -30,6 +38,7 @@ html, body {
   p, ul, ol {
     color: color(grey, dark);
     font-family: $regularFont;
+    list-style: none;
     font-size: 17px;
     line-height: 130%;
     margin-bottom: 10px;

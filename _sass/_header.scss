@@ -14,7 +14,7 @@
       .site-title {
         color: color(white);
         text-decoration: none;
-        font-size: 22px;
+        font-size: 24px;
         transition: color 0.2s;
         display: inline-block;
 
@@ -33,8 +33,9 @@
 
         .static-pages {
           a {
-            color: color(white);
+            color: lighten($color-accent, 35%);
             font-size: 14px;
+            font-weight: bold;
             text-transform: uppercase;
             text-decoration: none;
             margin-right: 5px;
@@ -46,7 +47,7 @@
             }
 
             &:hover {
-              color: lighten($color-accent, 35%);
+              color: color(white);
             }
           }
         }
