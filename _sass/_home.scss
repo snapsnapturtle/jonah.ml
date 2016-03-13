@@ -4,7 +4,10 @@
 
 .post-list {
   list-style: none;
-  margin-top: 20px;
+
+  @include breakpoint('desktop') {
+    margin-top: 20px;
+  }
 
   li {
     margin-bottom: 20px;

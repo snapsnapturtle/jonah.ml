@@ -1,21 +1,20 @@
+<script>var isModernBrowser = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);</script>
 <script>
-	// POST-RENDER
 	if (!cache) {
-		// Fonts not in LocalStorage or md5 did not match
 		window.addEventListener('load', function () {
 			var request = new XMLHttpRequest(), response;
 			request.open('GET', '{{ "/assets/font.89dc3b148bf42437e00ee344d52b3866.json" | prepend: site.baseurl }}', true);
-			request.onload = function () {
+			request.addEventListener('load', function () {
 				if (this.status == 200) {
 					try {
-						response = JSON.parse(this.response);
+						response = JSON.parse(request.responseText);
 						insertFont(response.value);
 						window.localStorage.setItem(key, this.response);
 					} catch (e) {
-						// LocalStorage is probably full
+						console.log(e);
 					}
 				}
-			};
+			});
 			request.send();
 		});
 	}
