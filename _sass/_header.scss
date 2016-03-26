@@ -7,51 +7,76 @@
 
   .main {
     clear: both;
+    vertical-align: middle;
 
-    .header-content {
-      vertical-align: middle;
+    .site-title {
+      color: color(white);
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.2s;
+      display: inline-block;
 
-      .site-title {
-        color: color(white);
-        text-decoration: none;
-        font-size: 24px;
-        transition: color 0.2s;
-        display: inline-block;
-
-        @include breakpoint('phone') {
-          font-size: 20px;
-        }
-
-        &:hover {
-          color: lighten($color-accent, 35%);
-        }
+      @include breakpoint('phone') {
+        font-size: 20px;
       }
 
-      .site-nav {
-        float: right;
-        margin-top: 5px;
+      &:hover {
+        color: lighten($color-accent, 35%);
+      }
+    }
 
-        .static-pages {
-          a {
-            color: lighten($color-accent, 35%);
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            margin-right: 5px;
-            padding: 2px 5px;
-            transition: color 0.2s;
+    .site-nav {
+      float: right;
+      margin-top: 5px;
 
-            &:last-of-type {
-              margin-right: 0;
-            }
+      .static-pages {
+        a {
+          color: lighten($color-accent, 35%);
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+          margin-right: 5px;
+          padding: 2px 5px;
+          transition: color 0.2s;
 
-            &:hover {
-              color: color(white);
-            }
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &:hover {
+            color: color(white);
           }
         }
       }
+    }
+  }
+}
+
+.photography {
+  .header {
+    background: transparent;
+    margin-top: 30px;
+
+    .site-title {
+      color: color(black);
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      @include breakpoint('phone') {
+        font-size: 18px;
+      }
+
+      &:hover {
+        color: lighten(color(black), 35%);
+      }
+    }
+
+    .site-nav {
+      display: none;
     }
   }
 }
