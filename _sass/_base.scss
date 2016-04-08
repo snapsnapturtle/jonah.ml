@@ -1,7 +1,7 @@
 @import "settings";
 @import "colours/functions";
 
-$color-accent: color(red);
+$color-accent: #B70038;
 
 * {
   box-sizing: border-box;
@@ -13,7 +13,7 @@ html, body {
   h1, h2, h3, h4, h5, h6 {
     color: color(grey, x-dark);
     font-family: $titleFont;
-    font-weight: normal;
+    font-weight: 100;
     font-size: 24px;
 
     @include breakpoint('phone') {
