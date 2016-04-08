@@ -3,7 +3,7 @@
 	if (!cache) {
 		window.addEventListener('load', function () {
 			var request = new XMLHttpRequest(), response;
-			request.open('GET', '{{ "/assets/font.89dc3b148bf42437e00ee344d52b3866.json" | prepend: site.baseurl }}', true);
+			request.open('GET', '{{ "/assets/fonts/circular.book.json" | prepend: site.baseurl }}', true);
 			request.addEventListener('load', function () {
 				if (this.status == 200) {
 					try {

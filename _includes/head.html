@@ -18,7 +18,7 @@
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <script>
-	    var md5 = '89dc3b148bf42437e00ee344d52b3866', key = 'font', cache;
+	    var key = 'font', cache;
 
 	    function insertFont(value) {
 		    var style = document.createElement('style');
@@ -29,13 +29,7 @@
 	    try {
 		    cache = window.localStorage.getItem(key);
 		    if(cache) {
-			    cache = JSON.parse(cache);
-			    if(cache.md5 == md5) {
-				    insertFont(cache.value);
-			    } else {
-				    window.localStorage.removeItem(key);
-				    cache = null;
-			    }
+			    insertFont(JSON.parse(cache).value);
 		    }
 	    } catch(e) {
 		    console.warn(e);

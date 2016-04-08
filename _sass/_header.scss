@@ -21,7 +21,7 @@
       }
 
       &:hover {
-        color: lighten($color-accent, 35%);
+        color: lighten($color-accent, 50%);
       }
     }
 
@@ -31,7 +31,7 @@
 
       .static-pages {
         a {
-          color: lighten($color-accent, 35%);
+          color: lighten($color-accent, 50%);
           font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
