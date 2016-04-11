@@ -10,5 +10,9 @@
   @include breakpoint('tablet') {
     width: 100%;
   }
+
+  @include breakpoint('phone') {
+    padding: 10px;
+  }
 }
 
