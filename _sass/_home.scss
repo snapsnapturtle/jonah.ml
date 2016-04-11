@@ -36,9 +36,17 @@
     margin-top: 4px;
     font-size: 15px;
     position: relative;
+
+    @include breakpoint('phone') {
+      margin-top: 0;
+    }
   }
 
   .post-foreword {
     color: #2a2a2a;
+
+    @include breakpoint('phone') {
+      line-height: 115%;
+    }
   }
 }
