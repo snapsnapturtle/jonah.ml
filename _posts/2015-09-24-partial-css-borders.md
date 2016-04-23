@@ -4,7 +4,6 @@ title:  "Partial CSS Borders"
 date:   2015-09-24 20:54:19
 description: There is no such thing as border-length in CSS, which would have made this really easy to do. But anyway, if you want to have partial borders (e.g. a border that spans only half the length of the div), you can use the before/after pseudo selectors for this. 
 type: article
-tag: article
 ---
 
 There is no such thing as border-length in CSS, which would have made this really easy to do. But anyway, 

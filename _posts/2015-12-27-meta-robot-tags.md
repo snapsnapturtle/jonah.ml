@@ -4,13 +4,13 @@ title:  "Meta Robot Tags"
 date:   2015-12-27 19:13:22
 description: Meta robots tag controls spiders from crawling and indexing your webpage or post. In this post, I will explain all the available types, such as nofollow and noodp in detail. 
 type: article
-tag: article
 ---
 
 Meta tags are used by spiders while crawling and indexing your site. The *robots meta tag* 
 can be used to control if and how search engines see and index your page.
 
 ##Default robots tag
+
 If you don’t specify any meta tag in a page then by default spider will crawl and index 
 your site. You could consider the following as the default tags:
 
@@ -21,6 +21,7 @@ your site. You could consider the following as the default tags:
 
 
 ##noindex
+
 Having the content of the robots meta tag set to *noindex* prevents your page from being 
 indexed by search engine spiders. This usually comes in handy when you have pages like 
 for example a shopping cart page. 
@@ -31,6 +32,7 @@ for example a shopping cart page.
 
 
 ##nofollow
+
 This meta tag prevents spiders to follow any link on the page. If you are a newbie then it 
 may be confusing to you. Let me explain you in detail. Whenever spider (Google bot) finds a 
 link (internal or external) on a page, it lands on that website for crawling and indexing, 
@@ -41,6 +43,7 @@ to enforce spider for not following any link on the page, we can use this tag.
 {% endhighlight %}
 
 ##noarchive
+
 You must have seen in search results that whenever you hover on any result it will show a 
 snapshot of that page at the right side of the Google search (see the below sreenshot!!). 
 That we call a cached copy of the webpage. To prevent a page from being cached we can specify 
@@ -52,6 +55,7 @@ below tag.
 
 
 ##noodp
+
 Prevents Search engine (Google, Yahoo and MSN)  to display its own description taken from 
 its directory, instead of you meta description. Using below tag would ensure that Search 
 engine would display your meta description below search results and it would be useful to 
@@ -62,6 +66,7 @@ improve your CTR.
 {% endhighlight %}
 
 ##noydir
+
 It is same as above NOODP tag, the only difference is that it would be applicable for Yahoo only.
 
 {% highlight html %}
@@ -83,6 +88,7 @@ OR (above tag and below two tags- both are same)
 
 
 ##Blocking a specific Bot
+
 By specifying meta name as “robots”,you are actually blocking all search engine robots. However if you want to block specific search engine bot then you can specify bot name instead of “robots”
 
 | Bot    | Name      |
