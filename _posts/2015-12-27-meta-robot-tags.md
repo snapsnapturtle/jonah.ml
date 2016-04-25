@@ -2,7 +2,6 @@
 layout: post
 title:  "Meta Robot Tags"
 date:   2015-12-27 19:13:22
-description: Meta robots tag controls spiders from crawling and indexing your webpage or post. In this post, I will explain all the available types, such as nofollow and noodp in detail. 
 type: article
 ---
 

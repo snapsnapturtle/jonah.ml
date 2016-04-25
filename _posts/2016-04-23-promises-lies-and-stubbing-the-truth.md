@@ -2,7 +2,6 @@
 layout: post
 title:  "Promises, Lies and Stubbing the Truth"
 date:   2016-04-22 12:34:03
-description: "A mocking framework such as Sinon.JS allows you to alter the way functions behave during a unit test. Mocking frameworks are especially powerful in dynamic languages, like JavaScript, as they are able to make large changes to your codebase for a given unit test."
 type: article
 ---
 
