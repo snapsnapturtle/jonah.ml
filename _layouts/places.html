@@ -4,17 +4,18 @@
 <body>
 {% include header.html %}
 
-<section class="main" id="content">
+<section style="width: 75%; margin: 0 auto;" id="content">
 	<div class="page">
 		{{ content }}
 	</div>
 
 </section>
 
-{% include footer.html %}
 <script src="{{ "/assets/scripts/d3.min.js" | prepend: site.baseUrl }}"></script>
 <script src="{{ "/assets/scripts/datamaps.world.hires.min.js" | prepend: site.baseUrl }}"></script>
 <script src="{{ "/assets/scripts/topojson.min.js" | prepend: site.baseUrl }}"></script>
+
+{% include footer.html %}
 </body>
 </html>
 
