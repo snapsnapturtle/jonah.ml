@@ -13,7 +13,6 @@ crawl and index your site. You could consider the following as the default tags:
 
 {% highlight html %}
 <meta name="robots" content="index, follow" />
-<meta name="robots" content="none" />
 {% endhighlight %}
 
 

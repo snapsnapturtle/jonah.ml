@@ -45,6 +45,7 @@ html, body {
     margin-bottom: 10px;
 
     @include breakpoint('tablet') {
+      font-size: 16px;
       color: color(grey, x-dark);
     }
 
