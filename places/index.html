@@ -3,7 +3,7 @@ layout: places
 title: Places
 permalink: /places/
 ---
-<div id="map"></div>
+<div id="map" style="margin: -30px 20px;"></div>
 
 <script src="../assets/scripts/d3.min.js"></script>
 <script src="../assets/scripts/topojson.min.js"></script>
@@ -25,26 +25,25 @@ permalink: /places/
 			borderWidth: 0
 		},
 		data: {
-			CHE: { fillKey: 'visited' },
-			GRC: { fillKey: 'visited' },
-			NLD: { fillKey: 'visited' },
-			TUR: { fillKey: 'visited' },
-			DNK: { fillKey: 'visited' },
-			HRV: { fillKey: 'visited' },
-			ITA: { fillKey: 'visited' },
-			DEN: { fillKey: 'visited' },
-			DEU: { fillKey: 'visited' },
-			FRA: { fillKey: 'visited' },
-			ESP: { fillKey: 'visited' },
-			PRT: { fillKey: 'visited' },
-			USA: { fillKey: 'visited' },
-			GBR: { fillKey: 'visited' },
-			AUS: { fillKey: 'visited' }
+			CHE: {fillKey: 'visited'},
+			GRC: {fillKey: 'visited'},
+			NLD: {fillKey: 'visited'},
+			TUR: {fillKey: 'visited'},
+			DNK: {fillKey: 'visited'},
+			HRV: {fillKey: 'visited'},
+			ITA: {fillKey: 'visited'},
+			DEN: {fillKey: 'visited'},
+			DEU: {fillKey: 'visited'},
+			FRA: {fillKey: 'visited'},
+			ESP: {fillKey: 'visited'},
+			PRT: {fillKey: 'visited'},
+			USA: {fillKey: 'visited'},
+			GBR: {fillKey: 'visited'},
+			AUS: {fillKey: 'visited'}
 		}
 	});
 
-	window.addEventListener('resize', function() {
+	window.addEventListener('resize', function () {
 		map.resize();
 	});
-
 </script>

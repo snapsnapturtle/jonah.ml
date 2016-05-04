@@ -5,7 +5,7 @@ date:   2016-04-24 21:19:47
 type: article
 ---
 
-##Why not use `float` / `double` to store money?
+**Why not use float / double to store money?**
 
 Because floats and doubles cannot accurately represent the base 10 multiples we use for money. 
 This issue isn't just for Java, it's for any programming language that uses native floating-point 

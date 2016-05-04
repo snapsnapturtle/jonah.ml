@@ -44,6 +44,7 @@
 
   .post-foreword {
     color: #2a2a2a;
+    font-family: 'georgia', serif;
 
     @include breakpoint('phone') {
       line-height: 115%;

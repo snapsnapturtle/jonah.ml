@@ -1,7 +1,7 @@
 @import "settings";
 @import "colours/functions";
 
-$color-accent: #B70038;
+$color-accent: #b70038;
 
 * {
   box-sizing: border-box;
@@ -38,15 +38,14 @@ html, body {
 
   p, ul, ol {
     color: color(grey, dark);
-    font-family: $regularFont;
+    font-family: 'georgia', serif;
     list-style: none;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 130%;
     margin-bottom: 10px;
 
     @include breakpoint('tablet') {
       color: color(grey, x-dark);
-      letter-spacing: -1px;
     }
 
     &:last-of-type {
