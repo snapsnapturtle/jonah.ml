@@ -26,6 +26,7 @@ html, body {
 
   h2 {
     font-size: 22px;
+    text-transform: lowercase;
 
     @include breakpoint('phone') {
       font-size: 20px;

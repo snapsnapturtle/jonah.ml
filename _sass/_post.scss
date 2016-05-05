@@ -2,7 +2,17 @@
 @import "colours/functions";
 
 .post {
+  margin-top: 20px;
+
+  @include breakpoint('phone') {
+    margin-top: 0;
+  }
+
   .post-header {
+    .post-title {
+      text-transform: lowercase;
+    }
+
     .post-meta {
       color: color(grey);
       font-size: 15px;
