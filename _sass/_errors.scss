@@ -1,17 +1,12 @@
 @import "settings";
 
 .error {
-  font-family: $regularFont;
   text-align: center;
-  padding-top: 45px;
+  padding-top: 50px;
 
   h1 {
-    font-family: $titleFont;
-    font-size: 25px;
+    font-size: 180%;
+    letter-spacing: -2px;
     margin-bottom: 15px;
-
-    @include breakpoint('phone') {
-      font-size: 28px;
-    }
   }
 }

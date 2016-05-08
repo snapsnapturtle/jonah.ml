@@ -1,9 +1,15 @@
 @charset "utf-8";
 
 /* Fonts */
-$regularFont: 'circular', arial, sans-serif;
-$titleFont: 'circular', arial, sans-serif;
+$defaultFont: 'circular', arial, sans-serif;
+$textFont: 'georgia', serif;
 $monoSpaceFont: consolas, monospace;
+
+/* Colours */
+$accentColor: #b70038;
+
+/* Animations */
+$animationDuration: 150ms;
 
 @import "functions/breakpoint";
 @import "colours/default";

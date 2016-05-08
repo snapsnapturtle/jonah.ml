@@ -57,16 +57,8 @@ use both, noodp and noydir.
 
 **Blocking specific engines** can be achieved by specifying meta name instead of robots, since
 that is actually blocking all search engines. However if you want to block specific search engine 
-bot then you can specify bot name instead of robots
-
-| Bot    | Name      |
-|--------|-----------|
-| Google | GOOGLEBOT |
-| Yahoo  | SLURP     |
-| MSN    | MSNBOT    |
-| ASK    | TEOMA     |
-
-So, if you want to make your page nofollow for Google only then you can use below tag.
+bot then you can specify bot name instead of robots: Google (GOOGLEBOT), Yahoo (SLURP), MSN (MSNBOT)
+and ASK (TEOMA). So, if you want to make your page nofollow for Google only then you can use below tag.
 
 {% highlight html %}
 <meta name="Googlebot" content="nofollow" />

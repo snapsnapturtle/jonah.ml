@@ -3,7 +3,7 @@
 @import "colours/functions";
 
 .header {
-  background: $color-accent;
+  background: $accentColor;
 
   .main {
     clear: both;
@@ -13,11 +13,17 @@
       color: color(white);
       text-decoration: none;
       font-size: 26px;
-      transition: color 0.2s;
+      transition: color $animationDuration;
       display: inline-block;
 
       @include breakpoint('phone') {
-        font-size: 24px;
+        font-size: 26px;
+        margin-top: -3px;
+        margin-bottom: -3px;
+
+        b {
+          letter-spacing: -2px;
+        }
       }
 
       @media (max-width: 300px) {
@@ -27,7 +33,7 @@
       }
 
       &:hover {
-        color: lighten($color-accent, 50%);
+        color: lighten($accentColor, 50%);
       }
     }
 
@@ -36,7 +42,7 @@
       margin-top: 5px;
 
       .static-pages {
-        .page-link > .image{
+        .page-link > .image {
           font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
@@ -44,8 +50,8 @@
           margin-top: -5px;
           padding: 5px 0;
 
-          g > path{
-            fill: lighten($color-accent, 50%);
+          g > path {
+            fill: lighten($accentColor, 50%);
             transition: fill 0.2s;
           }
 
@@ -70,33 +76,5 @@
 
   @include breakpoint('tablet') {
     width: 100%;
-  }
-}
-
-.photography {
-  .header {
-    background: transparent;
-    margin-top: 30px;
-
-    .site-title {
-      color: color(black);
-      text-align: center;
-      font-size: 20px;
-      width: 100%;
-      font-weight: 900;
-      text-transform: uppercase;
-
-      @include breakpoint('phone') {
-        font-size: 18px;
-      }
-
-      &:hover {
-        color: lighten(color(black), 35%);
-      }
-    }
-
-    .site-nav {
-      display: none;
-    }
   }
 }

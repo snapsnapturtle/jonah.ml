@@ -5,8 +5,9 @@ layout: null
   {% for post in site.posts %}
 {
       "title": "{{ post.title | xml_escape }}",
-      "url": " {{ post.url | xml_escape }}",
-      "description": "{{ post.description | xml_escape }}"
+      "url": "{{ post.url | xml_escape }}",
+      "date": "{% assign d = post.date | date: "%-d" %}{{ post.date | date: "%B" }} {% case d %}{% when '1' or '21' or '31' %}{{ d }}t{% when '2' or '22' %}{{ d }}nd{%when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, {{ post.date | date: "%Y" }}",
+      "description": "{{ post.content | truncatewords: 50 | strip_html }}"
 }
 {% unless forloop.last %},{% endunless %}
   {% endfor %}
