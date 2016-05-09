@@ -1,39 +1,42 @@
 <head>
-    <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta charset="utf-8">
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="author" content="{{ site.author }}">
-    <meta name="robots" content="noodp, noydir">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="author" content="{{ site.author }}">
+	<meta name="robots" content="noodp, noydir">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
 
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
-    <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}"/>
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
-    {% if site.type %}<meta property="og:type" content="{{ page.type }}"/>{% endif %}
+	<!-- TODO: move social data tags to new file as well as rich snippets https://developers.google.com/structured-data/rich-snippets/articles#article_markup_properties -->
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+	<meta property="og:url" content="{{ site.baseurl }}{{ page.url }}"/>
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+	{% if site.type %}
+		<meta property="og:type" content="{{ page.type }}"/>
+	{% endif %}
 
-    <link rel="icon" href="{{ "/assets/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon"/>
-    <link rel="apple-touch-icon" href="{{ "/assets/apple-touch-icon.png" | prepend: site.baseurl }}" sizes="256x256"/>
-    <link rel="alternate" type="application/atom+xml" title="Recent notes" href="/feed.xml">
+	<link rel="icon" href="{{ '/assets/favicon.ico' | prepend: site.baseurl }}" type="image/x-icon"/>
+	<link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | prepend: site.baseurl }}" sizes="256x256"/>
+	<link rel="alternate" type="application/atom+xml" title="Recent notes" href="/feed.xml">
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script>
-	    var key = 'font', cache;
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<script>
+		var key = 'font', cache;
 
-	    function insertFont(value) {
-		    var style = document.createElement('style');
-		    style.innerHTML = value;
-		    document.head.appendChild(style);
-	    }
+		function insertFont(value) {
+			var style = document.createElement('style');
+			style.innerHTML = value;
+			document.head.appendChild(style);
+		}
 
-	    try {
-		    cache = window.localStorage.getItem(key);
-		    if(cache) {
-			    insertFont(JSON.parse(cache).value);
-		    }
-	    } catch(e) {
-		    console.warn(e);
-	    }
-    </script>
-    <link rel="stylesheet" property="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+		try {
+			cache = window.localStorage.getItem(key);
+			if (cache) {
+				insertFont(JSON.parse(cache).value);
+			}
+		} catch(e) {
+			console.warn(e);
+		}
+	</script>
+	<link rel="stylesheet" property="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
 </head>

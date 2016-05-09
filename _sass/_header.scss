@@ -17,7 +17,7 @@
       display: inline-block;
 
       @include breakpoint('phone') {
-        font-size: 26px;
+        font-size: 24px;
         margin-top: -3px;
         margin-bottom: -3px;
 
@@ -43,15 +43,15 @@
 
       .static-pages {
         .page-link > .image {
-          font-size: 14px;
+          height: 32px;
           font-weight: bold;
           text-transform: uppercase;
           text-decoration: none;
-          margin-top: -5px;
+          margin-top: -3px;
           padding: 5px 0;
 
           g > path {
-            fill: lighten($accentColor, 50%);
+            fill: lighten($accentColor, 60%);
             transition: fill 0.2s;
           }
 
