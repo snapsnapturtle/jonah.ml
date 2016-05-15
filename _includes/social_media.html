@@ -1,0 +1,6 @@
+<!-- TODO: add rich snippets https://developers.google.com/structured-data/rich-snippets/articles#article_markup_properties -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+<meta property="og:url" content="{{ site.live_url }}{{ page.url }}"/>
+<meta property="og:description" content="{% if page.id %}{{ page.content | truncatewords: 50 | strip_html }}{% else %}{{ site.description }}{% endif %}"/>
+<meta property="og:type" content="{% if page.id %}article{% else %}website{% endif %}"/>
+<meta property="og:image" content="" />

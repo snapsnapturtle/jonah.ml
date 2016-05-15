@@ -4,6 +4,7 @@ author: Jonah Möller
 email: jonah.moeller@gmail.com
 description: Software developer living in Hamburg, Germany, currently making stuff for white label eCommerce
 github_username: snapsnapturtle
+live_url: https://jonah.ml
 
 # Build settings
 markdown: kramdown
