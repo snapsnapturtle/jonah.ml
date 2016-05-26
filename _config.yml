@@ -1,17 +1,22 @@
-# Site settings
+# site variables
 title: Jonah M.
 author: Jonah Möller
 email: jonah.moeller@gmail.com
 description: Software developer living in Hamburg, Germany, currently making stuff for white label eCommerce
 github_username: snapsnapturtle
+
+# social metatadata
 live_url: https://jonah.ml
 
-# Build settings
-markdown: kramdown
+# Serving
+port: 4000
 
+# build settings
+markdown: kramdown
 sass:
   style: compressed
 
-# Optional Stuff
+# optional
 gems:
   - jemoji
+

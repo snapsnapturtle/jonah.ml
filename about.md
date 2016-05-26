@@ -4,6 +4,34 @@ title: About me
 permalink: /about/
 ---
 
-My name is Jonah and I am to become a Web Developer. I write PHP Applications and tinker around with technologies that
+MI write PHP Applications and tinker around with technologies that
 are around at the time. Currently I am employed at the white label eCommerce GmbH in Hamburg, Germany. Don't be shy 
 and say hello.
+
+Long ago, in a $HOME directory mounted several servers away…
+
+
+**Summary**<br>
+Expert Software Developer dedicated to constantly improving tools and infrastructure to maximize productivity, minimize system downtime and quickly respond to the
+changing needs of the business. Highly dependable Software Engineer and enthusiastic team player dedicated to streamlining processes and efficiently resolving project
+issues.
+
+**highlights**
+
+* php object juggler
+* javascript ninja
+* sql stuff
+* concept and design
+<br>
+<br>
+
+**Accomplishments**<br>
+Designed, developed and produced [product], which was successfully open sourced and made publicly available here: [link to project]
+
+**Experience**<br>
+Software Developer at white label eCommerce GmbH, Aug 2014 - Jun 2018<br>
+Drove continual improvement to system architecture by refactoring old legacy code.Coordinated with QA testers for end-to-end unit testing and post-production testing.
+Collaborated with product and engineering team members to define and develop new product concepts. Created proof-of-concept prototype applications for demonstration and
+evaluation purposes. Updated, modified and expanded existing software programs. Instrumented and modified unit and integration tests to improve software quality and
+reliability. Installed, supported and maintained file servers and network access. Built decoupled and service-oriented messaging software and platforms using Redis.
+

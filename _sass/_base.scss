@@ -30,7 +30,6 @@ html, body {
   p, ul, ol {
     color: color(grey, dark);
     font-family: $textFont;
-    list-style: none;
     font-size: 17px;
     line-height: 130%;
     margin-bottom: 10px;
@@ -42,6 +41,18 @@ html, body {
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li:before {
+      display: inline-block;
+      float: left;
+      content: '»';
+      color: rgb(105, 105, 105);
+      margin-right: 4px;
     }
   }
 

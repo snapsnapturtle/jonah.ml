@@ -3,7 +3,6 @@
 @import "colours/functions";
 
 .post-list {
-  list-style: none;
   margin-top: 20px;
 
   @include breakpoint('phone') {
@@ -15,6 +14,11 @@
 
     @include breakpoint('phone') {
       margin-bottom: 10px;
+    }
+
+    &:before {
+      content: '';
+      margin-left: 0;
     }
 
     &:last-of-type {
@@ -33,12 +37,13 @@
   }
 
   .post-meta {
+    font-family: $defaultFont;
     color: color(grey, medium);
-    font-size: 100%;
+    font-size: 13px;
     position: relative;
 
     @include breakpoint('desktop') {
-      margin-top: 3px;
+      margin-top: 2px;
     }
   }
 

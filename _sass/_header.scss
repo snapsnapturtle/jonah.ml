@@ -42,28 +42,13 @@
       margin-top: 5px;
 
       .static-pages {
-        .page-link > .image {
-          height: 32px;
-          font-weight: bold;
+        .page-link {
+          color: color(white);
+          font-weight: 100;
+          font-size: 13px;
           text-transform: uppercase;
           text-decoration: none;
-          margin-top: -3px;
-          padding: 5px 0;
-
-          g > path {
-            fill: lighten($accentColor, 60%);
-            transition: fill 0.2s;
-          }
-
-          &:last-of-type {
-            margin-right: 0;
-          }
-
-          &:hover {
-            g > path {
-              fill: color(white);
-            }
-          }
+          padding: 0 5px;
         }
       }
     }
