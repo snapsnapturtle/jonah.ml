@@ -1,24 +1,25 @@
 ---
 layout: post
-title:  "The Forbidden Float"
-date:   2016-04-24 21:19:47
+title: "The Forbidden Float"
+date: 2016-04-24 21:19:47
 type: article
 ---
 
-**Why using float or double is such a bad idea to use for monetary operations?**
+## Why using float or double for money is such a bad idea?
 
-Floats and doubles cannot accurately represent the base 10 multiples we use for money. This problem
+Because floats and doubles cannot accurately represent the base 10 multiples we use for money. This problem
 occurs in any programming language that uses native floating-point types, as it stems from how
 computers handle floating-point numbers by default.
 
-**Example:** Suppose you have `$1.03` and you spend `42c`. How much money do you have left?
+**Example:**
+Suppose you have `$1.03` and you spend `42c`. How much money do you have left?
 
 {% highlight java %}
 System.out.println(1.03 - 0.42);
->> 0.6100000000000001
+-> 0.6100000000000001
 {% endhighlight %}
 
-This does not look right now, does it?
+This does not look right, **does it**?
 
 Well, this is how an [`IEEE-754`](https://de.wikipedia.org/wiki/IEEE_754) floating-point number works:
 It dedicates a bit for the sign, a few bits to store an exponent for the base, and the rest for a

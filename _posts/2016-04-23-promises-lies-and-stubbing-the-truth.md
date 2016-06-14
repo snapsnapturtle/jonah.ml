@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Promises, Lies and Stubbing the Truth"
-date:   2016-04-22 12:34:03
+title: "Promises, Lies and Stubbing the Truth"
+date: 2016-04-22 12:34:03
 type: article
 ---
 

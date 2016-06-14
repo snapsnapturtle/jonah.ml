@@ -1,11 +1,13 @@
 <head>
 	<meta charset="utf-8">
-	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<title>{% if page.siteTitle %}{{ page.siteTitle }}{% elsif page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}</title>
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="author" content="{{ site.author }}">
 	<meta name="robots" content="noodp, noydir">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"/>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no"/>
 
 	{% include social_media.html %}
 
@@ -14,8 +16,11 @@
 	<link rel="alternate" type="application/atom+xml" title="Recent notes" href="/feed.xml">
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.live_url }}">
+
 	<script>
-		var key = 'font', cache;
+		var key = 'fonts';
+		var cache;
+
 		function insertFont(value) {
 			var style = document.createElement('style');
 			style.innerHTML = value;

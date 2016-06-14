@@ -3,17 +3,18 @@
 
 html, body {
   font-family: $defaultFont;
+  -webkit-text-size-adjust: 100%;
 
   h1, h2, h3, h4, h5, h6 {
     color: color(grey, x-dark);
     font-family: $defaultFont;
-    font-weight: 100;
-    font-size: 24px;
+    font-weight: normal;
+    font-size: 28px;
     letter-spacing: -1px;
 
     @include breakpoint('tablet') {
-      font-size: 22px;
-      line-height: 30px;
+      font-size: 24px;
+      line-height: 28px;
       font-weight: bold;
     }
   }
@@ -24,14 +25,15 @@ html, body {
 
     @include breakpoint('phone') {
       font-size: 20px;
+      line-height: 22px;
     }
   }
 
   p, ul, ol {
     color: color(grey, dark);
     font-family: $textFont;
-    font-size: 17px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 135%;
     margin-bottom: 10px;
 
     @include breakpoint('tablet') {

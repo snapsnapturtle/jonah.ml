@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Meta Robot Tags"
-date:   2015-12-27 19:13:22
+title: "Meta Robot Tags"
+date: 2015-12-27 19:13:22
 type: article
 ---
 

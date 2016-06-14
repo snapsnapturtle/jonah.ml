@@ -14,10 +14,23 @@
     }
 
     .post-meta {
-      color: color(grey, medium);
+      color: color(grey, 'medium');
+      font-family: $defaultFont;
       font-size: 15px;
       position: relative;
       margin-bottom: 20px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  strong {
+    font-weight: 900;
+
+    @include breakpoint('phone') {
+      letter-spacing: -1px;
     }
   }
 }

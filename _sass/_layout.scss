@@ -16,3 +16,10 @@
   }
 }
 
+section.main {
+  margin-top: 75px;
+
+  @include breakpoint('phone') {
+    margin-top: 10px;
+  }
+}

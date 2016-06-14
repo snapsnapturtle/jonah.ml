@@ -1,17 +1,16 @@
-<script>var isModernBrowser = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);</script>
 <script>
 	if (!cache) {
-		window.addEventListener('load', function () {
+		window.addEventListener('load', function() {
 			var request = new XMLHttpRequest(), response;
-			request.open('GET', '{{ "/assets/fonts/circular.book.json" | prepend: site.baseurl }}', true);
-			request.addEventListener('load', function () {
+			request.open('GET', '{{ "/assets/fonts/fonts.json" | prepend: site.baseurl }}', true);
+			request.addEventListener('load', function() {
 				if (this.status == 200) {
 					try {
 						response = JSON.parse(request.responseText);
 						insertFont(response.value);
 						window.localStorage.setItem(key, this.response);
-					} catch (e) {
-						console.log(e);
+					} catch(e) {
+						console.warn(e);
 					}
 				}
 			});

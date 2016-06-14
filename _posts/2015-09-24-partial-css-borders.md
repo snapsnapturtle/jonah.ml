@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Partial CSS Borders"
-date:   2015-09-24 20:54:19
+title: "Partial CSS Borders"
+date: 2015-09-24 20:54:19
 type: article
 ---
 
