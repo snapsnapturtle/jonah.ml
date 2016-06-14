@@ -1,3 +1,18 @@
+{% if page.background %}
+<style>
+	.hero-image {
+		background-image: url('{{page.background}}');
+		background-size: {{page.background-size-width}}px {{page.background-size-height}}px;
+	}
+
+	@media (max-width: 550px) {
+		.hero-image {
+			background-size: {{page.background-size-width | divided_by: 2}}px {{page.background-size-height | divided_by: 2}}px;
+		}
+	}
+</style>
+{% endif %}
+
 <div class="hero-image"></div>
 
 <header class="header" id="header">

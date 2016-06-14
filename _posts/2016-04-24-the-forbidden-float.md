@@ -3,6 +3,10 @@ layout: post
 title: "The Forbidden Float"
 date: 2016-04-24 21:19:47
 type: article
+
+background: "/assets/images/back-to-the-future.jpg"
+background-size-width: "1000"
+background-size-height: "344"
 ---
 
 ## Why using float or double for money is such a bad idea?
@@ -19,9 +23,7 @@ System.out.println(1.03 - 0.42);
 -> 0.6100000000000001
 {% endhighlight %}
 
-This does not look right, **does it**?
-
-Well, this is how an [`IEEE-754`](https://de.wikipedia.org/wiki/IEEE_754) floating-point number works:
+Well, it is how [`IEEE-754`](https://de.wikipedia.org/wiki/IEEE_754) floating-point number works:
 It dedicates a bit for the sign, a few bits to store an exponent for the base, and the rest for a
 multiple of that elevated base. This leads to numbers like `10.25` being represented in a form
 similar to `1025 * 10^-2`; except that instead of the base being 10, for floats and doubles, it's
@@ -44,6 +46,8 @@ the tiny errors, but as you perform more additions, subtractions, multiplication
 inexact numbers, you'll lose more and more precision as the errors add up. This makes floats and 
 doubles not ideal for dealing with money, where perfect accuracy for multiples of base 10 powers
 is required.
+
+### so what can you do?
 
 A solution that works in just about any language is to use integers instead, and count cents. For 
 instance, 1025 would be $10.25. Several languages sometimes also have built-in types to deal with

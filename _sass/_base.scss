@@ -29,6 +29,12 @@ html, body {
     }
   }
 
+  h3 {
+    font-size: 18px;
+    font-family: $defaultFont;
+    letter-spacing: 0;
+  }
+
   p, ul, ol {
     color: color(grey, dark);
     font-family: $textFont;

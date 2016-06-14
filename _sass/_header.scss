@@ -3,28 +3,31 @@
 @import "colours/functions";
 
 .hero-image {
-  background: #000000 url('/assets/images/home-background.jpg') no-repeat fixed;
+  height: 200px;
+  background: #000000 url('/assets/images/home-background.jpg') repeat fixed center top;
   background-size: 2000px 300px;
-  height: 125px;
 
   @include breakpoint('phone') {
     background-size: 1000px 150px;
-    height: 50px;
+    height: 100px;
   }
 }
 
 .header {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
-  margin-top: -125px;
+  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
+  margin-top: -200px;
 
   @include breakpoint('phone') {
-    margin-top: -50px;
+    margin-top: -100px;
+    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
   }
 
   .main {
     clear: both;
     vertical-align: middle;
+    height: 100px;
 
     .site-title {
       color: color(white, 0.9);
