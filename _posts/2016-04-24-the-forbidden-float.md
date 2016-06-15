@@ -4,9 +4,9 @@ title: "The Forbidden Float"
 date: 2016-04-24 21:19:47
 type: article
 
-background: "/assets/images/back-to-the-future.jpg"
+background: "/assets/images/the-forbidden-float.jpg"
 background-size-width: "1000"
-background-size-height: "344"
+background-size-height: "500"
 ---
 
 ## Why using float or double for money is such a bad idea?
