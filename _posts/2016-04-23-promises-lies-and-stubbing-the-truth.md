@@ -5,8 +5,8 @@ date: 2016-04-22 12:34:03
 type: article
 
 background: "/assets/images/promises-lies.jpg"
-background-size-width: "1024"
-background-size-height: "768"
+background-size-width: "1000"
+background-size-height: "500"
 ---
 
 A mocking framework allows you to alter the way functions behave during a unit test. Mocking frameworks are 
