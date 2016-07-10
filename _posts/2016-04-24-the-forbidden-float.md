@@ -3,10 +3,6 @@ layout: post
 title: "The Forbidden Float"
 date: 2016-04-24 21:19:47
 type: article
-
-background: "/assets/images/forbidden-float.jpg"
-background-size-width: "450"
-background-size-height: "425"
 ---
 
 ## Why using float or double for money is such a bad idea?
