@@ -1,15 +1,13 @@
 @charset "utf-8";
 
+@import "functions/breakpoint";
+
 /* Fonts */
 $defaultFont: 'circular', arial, sans-serif;
 $textFont: 'circular', serif;
 $monoSpaceFont: 'fira-code', sans-serif;
 
-/* Colours */
-$accentColor: #b70038;
-
 /* Animations */
 $animationDuration: 150ms;
 
-@import "functions/breakpoint";
-@import "colours/default";
+

@@ -1,19 +1,4 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
-<meta property="og:url" content="{{ site.live_url }}{{ page.url }}"/>
+<meta property="og:url" content="{{ page.url | prepend: site.live_url }}"/>
 <meta property="og:description" content="{% if page.id %}{{ page.content | truncatewords: 50 | strip_html }}{% else %}{{ site.description }}{% endif %}"/>
 <meta property="og:type" content="{% if page.id %}article{% else %}website{% endif %}"/>
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "{% if page.id %}NewsArticle{% else %}Website{% endif %}",
-  "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-  {% if page.date %}"datePublished": "{{ page.date }}",{% endif %}
-  "author": {
-    "@type": "Person",
-    "name": "{{ site.author }}"
-  }
-  "description": "{% if page.id %}{{ page.content | truncatewords: 50 | strip_html }}{% else %}{{ site.description }}{% endif %}",
-  "image": "{{ site.live_url }}/assets/apple-touch-icon.png"
-}
-</script>

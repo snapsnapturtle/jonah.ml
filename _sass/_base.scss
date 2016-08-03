@@ -1,12 +1,14 @@
 @import "settings";
-@import "colours/functions";
 
 html, body {
   font-family: $defaultFont;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(0deg, #2275d7 37%, #76abe9 100%);
 
   h1, h2, h3, h4, h5, h6 {
-    color: color(grey, x-dark);
+    color: white;
     font-family: $defaultFont;
     font-weight: normal;
     font-size: 28px;
@@ -19,24 +21,8 @@ html, body {
     }
   }
 
-  h2 {
-    font-size: 22px;
-    text-transform: lowercase;
-
-    @include breakpoint('phone') {
-      font-size: 20px;
-      line-height: 22px;
-    }
-  }
-
-  h3 {
-    font-size: 18px;
-    font-family: $defaultFont;
-    letter-spacing: 0;
-  }
-
   p, ul, ol {
-    color: color(grey, dark);
+    color: rgba(255, 255, 255, 0.9);
     font-family: $textFont;
     font-size: 16px;
     line-height: 135%;
@@ -44,7 +30,7 @@ html, body {
 
     @include breakpoint('tablet') {
       font-size: 16px;
-      color: color(grey, x-dark);
+      color: rgba(255, 255, 255, 0.9);
     }
 
     &:last-of-type {
@@ -64,23 +50,34 @@ html, body {
     }
   }
 
-  code {
-    font-family: $monoSpaceFont;
-  }
-
   a {
-    color: $accentColor;
+    color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
     text-decoration: none;
     transition: color $animationDuration ease-in;
 
-    &.active, &:hover, &.selected {
-      color: lighten($accentColor, 20%);
+    &.active, &:hover {
+      color: rgba(255, 255, 255, 0.65);
     }
   }
 }
 
-::selection {
-  color: color(white);
-  background-color: color(grey, x-dark);
+@import "settings";
+
+section.main {
+  clear: both;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(-180deg, #2275d7 37%, #76abe9 100%);
+  color: rgba(255, 255, 255, 0.9);
+
+  @include breakpoint('tablet') {
+    width: 100%;
+  }
+
+  @include breakpoint('phone') {
+    padding: 10px;
+  }
 }
+

@@ -1,58 +1,8 @@
-@import "settings";
-@import "base";
-@import "colours/functions";
+.home {
+  text-align: center;
+  margin-top: calc(20% - 100px);
 
-.post-list {
-  margin-top: 20px;
-
-  @include breakpoint('phone') {
-    margin-top: 0;
-  }
-
-  li {
-    margin-bottom: 20px;
-
-    @include breakpoint('phone') {
-      margin-bottom: 10px;
-    }
-
-    &:before {
-      content: '';
-      margin-left: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  .post-link {
-    text-decoration: none;
-    display: block;
-    transition: opacity $animationDuration;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  .post-meta {
-    font-family: $defaultFont;
-    color: color(grey, medium);
-    font-size: 13px;
-    position: relative;
-
-    @include breakpoint('desktop') {
-      margin-top: 2px;
-    }
-  }
-
-  .post-foreword {
-    color: color(grey, x-dark);
-    font-family: $textFont;
-
-    @include breakpoint('phone') {
-      line-height: 115%;
-    }
+  .page-title {
+    font-weight: 100;
   }
 }

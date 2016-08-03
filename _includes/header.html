@@ -1,28 +1,7 @@
-{% if page.background %}
-<style>
-	.hero-image {
-		background-image: url('{{page.background}}');
-		background-size: {{page.background-size-width}}px {{page.background-size-height}}px;
-	}
-
-	@media (max-width: 550px) {
-		.hero-image {
-			background-size: {{page.background-size-width | divided_by: 2}}px {{page.background-size-height | divided_by: 2}}px;
-		}
-	}
-</style>
-{% endif %}
-
-<div class="hero-image"></div>
-
 <header class="header" id="header">
-	<div class="main">
-		<a class="site-title" href="{{ '/' | prepend: site.baseurl }}">{% if page.h1 %}{{ page.h1 }}{% else %}<b>Jonah</b> <span class="last-name">Möller</span>{% endif %}</a>
-		<nav class="site-nav">
-			<div class="static-pages">
-				<a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">about</a>
-				<a class="page-link" href="https://github.com/{{ site.github_username }}" target="_blank">github</a>
-			</div>
-		</nav>
-	</div>
+	<a class="site-title" href="{{ '/' | prepend: site.baseurl }}">Jonah</a>
+	<nav class="site-nav">
+		<a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">about</a>
+		<a class="page-link" href="https://github.com/{{ site.github_username }}" target="_blank">github</a>
+	</nav>
 </header>

@@ -11,9 +11,5 @@
     @media (max-width: 550px) {
       @content;
     }
-  } @else if $point == watch {
-    @media (max-width: 312px) and (max-height: 390px) {
-      @content;
-    }
   }
 }
