@@ -1,8 +1,15 @@
 .home {
   text-align: center;
-  margin-top: calc(20% - 100px);
+  margin-top: calc(20% - 110px);
+  font-size: 18px;
 
   .page-title {
-    font-weight: 100;
+    font-weight: 900;
+    font-size: 30px
+  }
+
+  .description {
+    margin: 15px auto;
+    max-width: 700px;
   }
 }
