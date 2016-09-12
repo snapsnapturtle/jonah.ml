@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-	{% include head.html %}
+{% include head.html %}
 
-	<body {% if page.class %}class="{{ page.class }}"{% endif %}>
-		<section class="main" id="content">
-			{% include header.html %}
+<body {% if page.class %}class="{{ page.class }}" {% endif %}>
+{% include header.html %}
 
-			{{ content }}
-		</section>
+<section class="main" id="content">
+	{{ content }}
+</section>
 
-		{% include footer.html %}
-	</body>
+{% include footer.html %}
+</body>
 </html>

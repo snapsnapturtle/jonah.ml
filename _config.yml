@@ -20,3 +20,12 @@ sass:
 gems:
   - jemoji
 
+# navigation
+navigation:
+- text: hello
+  url: /
+- text: about
+  url: /about/
+- text: blog
+  url: /blog/
+  layout: post
