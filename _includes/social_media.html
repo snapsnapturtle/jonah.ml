@@ -1,4 +1,0 @@
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
-<meta property="og:url" content="{{ page.url | prepend: site.live_url }}"/>
-<meta property="og:description" content="{% if page.id %}{{ page.content | truncatewords: 50 | strip_html }}{% else %}{{ site.description }}{% endif %}"/>
-<meta property="og:type" content="{% if page.id %}article{% else %}website{% endif %}"/>
