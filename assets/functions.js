@@ -1,9 +1,6 @@
 window.onload = function () {
-	var text = 'whois jonah.ml<br><br>Jonah Möller is a software developer living and working<br>in Hamburg, Germany at <a href="http://the-white-label.com/"' +
-		' target="_blank">white label eCommerce</a>.<br><br>Apart from work-related projects, he enjoys travelling<br>the world and capturing moments with his camera.<br><br><br><b>Contact</b>:&nbsp; &nbsp; <a href="https://www.github.com/snapsnapturtle/">GitHub</a> &nbsp; <a href="https://www.instagram.com/snapsnapturtle/">Instagram</a> &nbsp; <a href="mailto:jonah.moeller@gmail.com">jonah.moeller@gmail.com</a><br><br>#';
-
-	type(text);
-}
+	type(home.join('<br>'));
+};
 
 function type(text, new_caption_length) {
 	var captionLength = new_caption_length || 0;
@@ -15,3 +12,25 @@ function type(text, new_caption_length) {
 		}, 1);
 	}
 }
+
+var links = {
+	wlec: '<a target="_blank" href="//the-white-label.com/">white label eCommerce</a>',
+	github: '<a target="_blank" href="//github.com/snapsnapturtle/">GitHub</a>',
+	instagram: '<a target="_blank" href="//instagram.com/snapsnapturtle">Instagram</a>',
+	xing: '<a target="_blank" href="//xing.com/profile/Jonah_Moeller2">Xing</a>',
+	mail: '<a href="mailto:jonah.moeller@gmail.com">jonah.moeller@gmail.com</a>'
+};
+
+
+var home = [
+	'whois <a href="//jonah.ml">jonah.ml</a><br>',
+	'Jonah Möller is a software developer living and working',
+    'in Hamburg, Germany at ' + links.wlec + '<br>',
+    'Apart from work-related projects, he enjoys travelling',
+    'the world and capturing moments with his camera.<br>',
+    '',
+    'Contact: &nbsp; ' + links.github + ' &nbsp; ' + links.instagram + ' &nbsp; ' + links.mail,
+    '',
+    '> '
+];
+

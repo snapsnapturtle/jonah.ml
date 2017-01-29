@@ -1,0 +1,38 @@
+body {
+    background-color: #121315;
+    padding: 3%;
+    color: #cccccc;
+    font-size: 1em;
+}
+
+a {
+    color: #22e43c;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #121315;
+    background: #22e43c;
+    text-decoration: none;
+}
+
+.console {
+    font-family: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+    color: #22e43c;
+}
+
+#cursor {
+    margin-left: .3em;
+    display: inline-block;
+    width: .5em;
+    height: 1em;
+    line-height: 16px;
+    border-bottom: 2px solid #22e43c;
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
