@@ -2,112 +2,134 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>Jonah Möller — a whois story</title>
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="description" content="internet vigilante, travelling photographer, pianist and emoji enthusiast">
-	<meta name="author" content="Jonah Möller">
-	<meta name="robots" content="noodp, noydir">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" />
-	<link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="utf-8">
+    <title>Jonah Möller — a whois story</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="internet vigilante, travelling photographer, pianist and emoji enthusiast">
+    <meta name="author" content="Jonah Möller">
+    <meta name="robots" content="noodp, noydir">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="favicon.png">
 
-	<meta property="og:title" content="Jonah Möller — a whois story" />
-	<meta property="og:url" content="https://jonah.ml/" />
-	<meta property="og:description" content="internet vigilante, travelling photographer, pianist and emoji enthusiast" />
-	<meta property="og:type" content="website" />
+    <meta property="og:title" content="Jonah Möller — a whois story" />
+    <meta property="og:url" content="https://jonah.ml/" />
+    <meta property="og:description" content="internet vigilante, travelling photographer, pianist and emoji enthusiast" />
+    <meta property="og:type" content="website" />
 
-	<style>
-		body {
-			background-color: #000000;
-			margin: 5em 2em;
-			padding: 0;
-			color: #98B49C;
-			font-size: 1em;
-			line-height: 140%;
-			font-family: 'Fira Code', 'Hack', 'Lucida Sans Typewriter', 'Lucida Console', monospace;
-		}
+    <style>
+        body {
+            background-color: #000000;
+            margin: 5em 2em;
+            padding: 0;
+            color: #98B49C;
+            font-size: 1em;
+            line-height: 140%;
+            font-family: 'Fira Code', 'Hack', 'Lucida Sans Typewriter', 'Lucida Console', monospace;
+        }
 
-		a {
-			color: #E6F1C7;
-			text-decoration: none;
-		}
+        a {
+            color: #E6F1C7;
+            text-decoration: none;
+        }
 
-		a:hover {
-			text-decoration: underline;
-		}
+        a.hello {
+            margin-left: 0.8em;
+            display: inline-block;
+        }
 
-		#cursor {
-			margin-left: .3em;
-			display: inline-block;
-			width: .6em;
-			height: 1em;
-			line-height: 16px;
-			border-bottom: 2px solid #E6F1C7;
-			animation: blink-animation 1s steps(2, start) infinite;
-		}
+        a:hover {
+            text-decoration: underline;
+        }
 
-		@keyframes blink-animation {
-			to {
-				visibility: hidden;
-			}
-		}
-	</style>
+        #cursor {
+            margin-left: .3em;
+            display: inline-block;
+            width: .6em;
+            height: 1em;
+            line-height: 16px;
+            border-bottom: 2px solid #E6F1C7;
+        }
+
+        #cursor.blinking {
+            animation: blink-animation 1s steps(2, start) infinite;
+        }
+
+        @media (min-width: 30em) {
+            body {
+                margin: 6em 4em;
+            }
+
+            div#caption {
+                max-width: 35em;
+            }
+
+            a.hello {
+                margin-left: 1.4em;
+            }
+        }
+
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+    </style>
 </head>
 
 <body>
-	<noscript>
-		whois jonah.ml<br><br>
-		Jonah Möller is a full-stack software developer working<br>
-		at <a target="_blank" href="//mytaxi.com/">mytaxi</a> and living in Hamburg, Germany.<br>
-		<br>
-		Apart from work-related projects, he enjoys travelling,<br>
-		making music and capturing moments with his camera.<br>
-		<br>
-		Say hello:<br><br>
-		<a target="_blank" href="//github.com/snapsnapturtle/">GitHub</a><br>
-		<a target="_blank" href="//instagram.com/snapsnapturtle">Instagram</a><br>
-		<a href="mailto:jonah.moeller@gmail.com">E-Mail</a><br><br>
-	</noscript>
-	<div>
-		<span>$ </span>
-		<span id="caption"></span>
-		<span id="cursor">&nbsp;</span>
-	</div>
-	<script>
-		function type(text, new_caption_length) {
-			var captionLength = new_caption_length || 0;
-			document.getElementById('caption').innerHTML = text.substr(0, captionLength++);
+<noscript>
+    $ whois <a href="//jonah.ml">jonah.ml</a><br />
+    <br />
+    Jonah Möller is a full-stack software developer working<br class="inline" />
+    at <a target="_blank" href="//mytaxi.com/">mytaxi</a> and living in Hamburg, Germany.<br />
+    <br />
+    Apart from work-related projects, he enjoys travelling,<br class="inline" />
+    playing the piano and capturing moments with his camera.<br />
+    <br />
+    Say hello:
+    <a target="_blank" href="//github.com/snapsnapturtle/">GitHub</a>,
+    <a target="_blank" href="//instagram.com/snapsnapturtle">Instagram</a>,
+    <a href="mailto:jonah.moeller@gmail.com">E-Mail</a>
+    <br />
+    <br />
+</noscript>
+<div>
+    <div id="caption"></div>
+</div>
+<script>
+    const animationPerCharacter = 2;
 
-			if (captionLength < text.length + 1) {
-				setTimeout(function () {
-					type(text, captionLength);
-				}, 1);
-			}
-		}
+    function type(text, newCaptionLength) {
+        let captionLength = newCaptionLength || 0;
+        document.getElementById('caption').innerHTML = text.substr(0, captionLength++) + ' <span id="cursor">&nbsp;</span>';
 
-		const links = {
-			mytaxi: '<a target="_blank" href="//mytaxi.com/">mytaxi</a>',
-			github: '<a target="_blank" href="//github.com/snapsnapturtle/">GitHub</a>',
-			instagram: '<a target="_blank" href="//instagram.com/snapsnapturtle">Instagram</a>',
-			mail: '<a href="mailto:jonah.moeller@gmail.com">E-Mail</a>'
-		};
+        if (captionLength < text.length + 1) {
+            setTimeout(function () {
+                type(text, captionLength);
+            }, animationPerCharacter);
+        } else {
+            const cursor = document.getElementById('cursor');
+            cursor.className = 'blinking';
+        }
+    }
+
+    const links = {
+        mytaxi: '<a target="_blank" href="//mytaxi.com/">mytaxi</a>',
+        github: '<a target="_blank" class="hello" href="//github.com/snapsnapturtle/">GitHub</a>',
+        instagram: '<a target="_blank" class="hello" href="//instagram.com/snapsnapturtle">Instagram</a>',
+        mail: '<a class="hello" href="mailto:jonah.moeller@gmail.com">E-Mail</a>'
+    };
 
 
-		const home = [
-			'whois <a href="//jonah.ml">jonah.ml</a><br>',
-			'Jonah Möller is a full-stack software developer working',
-			'at ' + links.mytaxi + ' and living in Hamburg, Germany.<br>',
-			'Apart from work-related projects, he enjoys travelling,',
-			'making music and capturing moments with his camera.<br>',
-			'',
-			'Say hello: &nbsp; ' + links.github + ' &nbsp; ' + links.instagram + ' &nbsp; ' + links.mail,
-			'',
-			'$ '
-		];
+    const homeText = [
+        '$ whois <a href="//jonah.ml">jonah.ml</a>',
+        'Jonah Möller is a full-stack software developer working at ' + links.mytaxi + ' and living in Hamburg, Germany.',
+        'Apart from work-related projects, he enjoys travelling, playing the piano and capturing moments with his camera.',
+        'Say hello:' + links.github + links.instagram + links.mail,
+        '$ '
+    ].join('<br /><br/>');
 
-		type(home.join('<br>'));
-	</script>
-
+    type(homeText);
+</script>
 </body>
-
 </html>
