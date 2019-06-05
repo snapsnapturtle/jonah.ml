@@ -41,7 +41,7 @@
             text-decoration: underline;
         }
 
-        #cursor {
+        .cursor {
             margin-left: .3em;
             display: inline-block;
             width: .6em;
@@ -50,8 +50,12 @@
             border-bottom: 2px solid #E6F1C7;
         }
 
-        #cursor.blinking {
+        .blinking {
             animation: blink-animation 1s steps(2, start) infinite;
+        }
+
+        #caption {
+            display: inline;
         }
 
         @media (min-width: 30em) {
@@ -60,7 +64,7 @@
                 margin: 6em 4em;
             }
 
-            div#caption {
+            .container {
                 max-width: 35em;
             }
 
@@ -93,24 +97,26 @@
     <a href="mailto:jonah.moeller@gmail.com">E-Mail</a>
     <br />
     <br />
+    $ <span class="cursor blinking">&nbsp;</span>
 </noscript>
-<div>
+<div class="container">
     <div id="caption"></div>
+    <span class="cursor" id="dynamic-cursor">&nbsp;</span>
 </div>
 <script>
     const animationPerCharacter = 2;
 
     function type(text, newCaptionLength) {
         let captionLength = newCaptionLength || 0;
-        document.getElementById('caption').innerHTML = text.substr(0, captionLength++) + ' <span id="cursor">&nbsp;</span>';
+        document.getElementById('caption').innerHTML = text.substr(0, captionLength++);
 
         if (captionLength < text.length + 1) {
             setTimeout(function () {
                 type(text, captionLength);
             }, animationPerCharacter);
         } else {
-            const cursor = document.getElementById('cursor');
-            cursor.className = 'blinking';
+            const cursor = document.getElementById('dynamic-cursor');
+            cursor.className = 'cursor blinking';
         }
     }
 
