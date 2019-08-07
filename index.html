@@ -19,12 +19,12 @@
     <style>
         body {
             background-color: #000000;
-            margin: 5em 2em;
+            margin: 4em 2em;
             padding: 0;
             color: #98B49C;
             font-size: 1em;
             line-height: 140%;
-            font-family: 'Fira Code', 'Hack', 'Lucida Sans Typewriter', 'Lucida Console', monospace;
+            font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
         }
 
         a {
@@ -46,7 +46,7 @@
             display: inline-block;
             width: .6em;
             height: 1em;
-            line-height: 16px;
+            line-height: 1rem;
             border-bottom: 2px solid #E6F1C7;
         }
 
@@ -58,18 +58,18 @@
             display: inline;
         }
 
-        @media (min-width: 30em) {
+        @media (min-width: 30rem) {
             body {
-                font-size: 1.2em;
-                margin: 6em 4em;
+                font-size: 1.2rem;
+                margin: 6rem 4rem;
             }
 
             .container {
-                max-width: 35em;
+                max-width: 35rem;
             }
 
             a.hello {
-                margin-left: 1.4em;
+                margin-left: 1.4rem;
             }
         }
 
@@ -104,7 +104,7 @@
     <span class="cursor" id="dynamic-cursor">&nbsp;</span>
 </div>
 <script>
-    const animationPerCharacter = 2;
+    const animationPerCharacter = 1;
 
     function type(text, newCaptionLength) {
         let captionLength = newCaptionLength || 0;
