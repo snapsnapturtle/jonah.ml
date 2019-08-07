@@ -1,144 +1,133 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Jonah Möller — a whois story</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="description" content="internet vigilante, travelling photographer, pianist and emoji enthusiast" />
+        <meta name="author" content="Jonah Möller" />
+        <meta name="robots" content="noodp, noydir" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" />
+        <link rel="icon" type="image/png" href="favicon.png" />
 
-<head>
-    <meta charset="utf-8">
-    <title>Jonah Möller — a whois story</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="internet vigilante, travelling photographer, pianist and emoji enthusiast">
-    <meta name="author" content="Jonah Möller">
-    <meta name="robots" content="noodp, noydir">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" type="image/png" href="favicon.png">
+        <meta property="og:title" content="Jonah Möller — a whois story" />
+        <meta property="og:url" content="https://jonah.ml/" />
+        <meta
+            property="og:description"
+            content="internet vigilante, travelling photographer, pianist and emoji enthusiast"
+        />
+        <meta property="og:type" content="website" />
 
-    <meta property="og:title" content="Jonah Möller — a whois story" />
-    <meta property="og:url" content="https://jonah.ml/" />
-    <meta property="og:description" content="internet vigilante, travelling photographer, pianist and emoji enthusiast" />
-    <meta property="og:type" content="website" />
-
-    <style>
-        body {
-            background-color: #000000;
-            margin: 4em 2em;
-            padding: 0;
-            color: #98B49C;
-            font-size: 1em;
-            line-height: 140%;
-            font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
-        }
-
-        a {
-            color: #E6F1C7;
-            text-decoration: none;
-        }
-
-        a.hello {
-            display: block;
-            margin-top: 0.4rem;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .cursor {
-            margin-left: .3em;
-            display: inline-block;
-            width: .6em;
-            height: 1em;
-            line-height: 1rem;
-            border-bottom: 2px solid #E6F1C7;
-        }
-
-        .blinking {
-            animation: blink-animation 1s steps(2, start) infinite;
-        }
-
-        #caption {
-            display: inline;
-        }
-
-        @media (min-width: 30rem) {
+        <style>
             body {
-                font-size: 1.1rem;
-                margin: 6rem 4rem;
+                background-color: #000000;
+                margin: 3em 1.5em;
+                padding: 0;
+                color: #eaeaea;
+                font-size: 1em;
+                line-height: 1.4;
+                font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace;
             }
 
-            .container {
-                max-width: 50rem;
+            p {
+                margin: 1.5rem 0
             }
 
-            a.hello {
-                margin-top: 0;
-                margin-left: 2.2rem;
+            a, a:link, a:visited {
+                color: #ff0080;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            a:hover, a:active {
+                text-decoration: underline;
+            }
+
+            .hello {
+                display: block;
+                margin-left: 1rem;
+                margin-top: 0.4rem;
+            }
+
+            .hello-intro {
+                font-size: 1rem;
                 display: inline-block;
+                margin-bottom: 1rem;
             }
-        }
 
-        @keyframes blink-animation {
-            to {
-                visibility: hidden;
+            .cursor {
+                display: inline-block;
+                width: 0.8rem;
+                height: 1rem;
+                line-height: 1rem;
+                border-bottom: 0.125rem solid #eaeaea;
             }
-        }
-    </style>
-</head>
 
-<body>
-<noscript>
-    $ whois <a href="//jonah.ml">jonah.ml</a><br />
-    <br />
-    Jonah Möller is a full-stack software developer working<br class="inline" />
-    at <a target="_blank" href="//mytaxi.com/">mytaxi</a> and living in Hamburg, Germany.<br />
-    <br />
-    Apart from work-related projects, he enjoys travelling,<br class="inline" />
-    playing the piano and capturing moments with his camera.<br />
-    <br />
-    Say hello:
-    <a target="_blank" href="//github.com/snapsnapturtle/">GitHub</a>,
-    <a target="_blank" href="//instagram.com/snapsnapturtle">Instagram</a>,
-    <a href="mailto:jonah.moeller@gmail.com">E-Mail</a>
-    <br />
-    <br />
-    $ <span class="cursor blinking">&nbsp;</span>
-</noscript>
-<div class="container">
-    <div id="caption"></div>
-    <span class="cursor" id="dynamic-cursor">&nbsp;</span>
-</div>
-<script>
-    const animationPerCharacter = 1;
+            .blinking {
+                animation: blink-animation 1s steps(2, start) infinite;
+            }
 
-    function type(text, newCaptionLength) {
-        let captionLength = newCaptionLength || 0;
-        document.getElementById('caption').innerHTML = text.substr(0, captionLength++);
+            @media (min-width: 44rem) {
+                body {
+                    font-size: 1.1rem;
+                    margin: 6rem 4rem;
+                }
 
-        if (captionLength < text.length + 1) {
-            setTimeout(function () {
-                type(text, captionLength);
-            }, animationPerCharacter);
-        } else {
-            const cursor = document.getElementById('dynamic-cursor');
-            cursor.className = 'cursor blinking';
-        }
-    }
+                p {
+                    margin: 2rem 0;
+                }
 
-    const links = {
-        mytaxi: '<a target="_blank" href="//mytaxi.com/">mytaxi</a>',
-        github: '<a target="_blank" class="hello" href="//github.com/snapsnapturtle/">👨‍💻 GitHub</a>',
-        instagram: '<a target="_blank" class="hello" href="//instagram.com/snapsnapturtle">📸 Instagram</a>',
-        mail: '<a class="hello" href="mailto:jonah.moeller@gmail.com">📧 E-Mail</a>'
-    };
+                .container {
+                    max-width: 48rem;
+                }
 
+                .hello {
+                    margin-top: 0;
+                    margin-left: 2.2rem;
+                    display: inline-block;
+                }
 
-    const homeText = [
-        '$ whois <a href="//jonah.ml">jonah.ml</a>',
-        'Jonah Möller is a full-stack software developer working at ' + links.mytaxi + ' and living in Hamburg, Germany.',
-        'Apart from work-related projects, he enjoys travelling, playing the piano and capturing moments with his camera.',
-        'Say hello:' + links.github + links.instagram + links.mail,
-        '$ '
-    ].join('<br /><br/>');
+                .hello-intro {
+                    display: inline-block;
+                    margin-bottom: 0;
+                }
+            }
 
-    type(homeText);
-</script>
-</body>
+            @keyframes blink-animation {
+                to {
+                    visibility: hidden;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <p>
+                $ whois <a href="//jonah.ml">jonah.ml</a>
+            </p>
+            <p>
+                Jonah Möller is a full-stack software developer working at <a target="_blank" href="//free-now.com/">FREE&nbsp;NOW</a> and living in Hamburg, Germany.
+            </p>
+            <p>
+                Apart from work-related projects, he enjoys travelling, playing the piano and capturing moments with his camera.
+            </p>
+            <p>
+                <span class="hello-intro">Say hello:</span>
+                <span class="hello">
+                    👨‍💻&nbsp;<a target="_blank" href="//github.com/snapsnapturtle/">GitHub</a>
+                </span>
+                <span class="hello">
+                    📸&nbsp;<a target="_blank" href="//instagram.com/snapsnapturtle">Instagram</a>
+                </span>
+                <span class="hello">
+                    📧&nbsp;<a href="mailto:jonah.moeller@gmail.com">E-Mail</a>
+                </span>
+            </p>
+            <br />
+            <p>
+                $ <span class="cursor blinking">&nbsp;</span>
+            </p>
+        </div>
+    </body>
 </html>
