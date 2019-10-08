@@ -20,37 +20,12 @@ a,
 a:link,
 a:visited {
     color: #ff0080;
-    font-weight: 600;
     text-decoration: none;
 }
 
 a:hover,
 a:active {
     text-decoration: underline;
-}
-
-a.red {
-    color: #FF0000;
-}
-
-a.blue {
-    color: #0070F3;
-}
-
-a.yellow {
-    color: #F5A623;
-}
-
-a.pink {
-    color: #FF0080;
-}
-
-a.purple {
-    color: #F81CE5;
-}
-
-a.cyan {
-    color: #79FFE1;
 }
 
 .hello {
