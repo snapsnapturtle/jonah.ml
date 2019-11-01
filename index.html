@@ -8,10 +8,123 @@
         <meta name="robots" content="noodp, noydir" />
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" />
         <link rel="icon" type="image/png" href="favicon.png" />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="fonts.css">
+
+        <style>
+            html {
+                -webkit-text-size-adjust: 100%;
+            }
+
+            body {
+                background-color: #000000;
+                margin: 2em 1.5em;
+                padding: 0;
+                color: #eaeaea;
+                font-size: 1em;
+                line-height: 1.4;
+                font-family: 'Hasklig', 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace;
+            }
+
+            p {
+                margin: 1.5rem 0;
+            }
+
+            b {
+                font-weight: 600;
+            }
+
+            a,
+            a:link,
+            a:visited {
+                color: #ff0080;
+                text-decoration: none;
+            }
+
+            a:hover,
+            a:active {
+                text-decoration: underline;
+            }
+
+            .hello {
+                display: block;
+                margin-left: 1rem;
+                margin-top: 0.4rem;
+            }
+
+            .hello-intro {
+                display: inline-block;
+                margin-bottom: 1rem;
+            }
+
+            .cursor {
+                display: inline-block;
+                width: 0.8rem;
+                height: 1rem;
+                line-height: 1rem;
+                border-bottom: 0.125rem solid #eaeaea;
+            }
+
+            .blinking {
+                animation: blink-animation 1s steps(2, start) infinite;
+            }
+
+            @media (min-width: 812px)  {
+                body {
+                    font-size: 1.1rem;
+                    margin: 5rem;
+                }
+
+                p {
+                    margin: 2rem 0;
+                }
+
+                .container {
+                    max-width: 50rem;
+                }
+
+                .hello {
+                    margin-top: 0;
+                    margin-left: 2.2rem;
+                    display: inline-block;
+                }
+
+                .hello-intro {
+                    display: inline-block;
+                    margin-bottom: 0;
+                }
+            }
+
+            @media (min-width: 1440px) {
+                body {
+                    font-size: 1.2rem;
+                    margin: 6rem;
+                }
+
+                p {
+                    margin: 3rem 0;
+                }
+            }
+
+            @keyframes blink-animation {
+                to {
+                    visibility: hidden;
+                }
+            }
+
+            @media (prefers-color-scheme: light) {
+                body {
+                    background: #ffffff;
+                    color: #151515;
+                }
+
+                .cursor {
+                    border-bottom-color: #151515;
+                }
+            }
+        </style>
     </head>
 
-    <body style="background: black">
+    <body>
         <div class="container">
             <p>$ whois <a href="//jonah.ml">jonah.ml</a></p>
             <p>
