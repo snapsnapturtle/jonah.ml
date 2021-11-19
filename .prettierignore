@@ -1,6 +1,5 @@
-.DS_STORE
-.idea/
 dist/
 node_modules/
 .parcel-cache/
-.husky
+.idea/
+package-lock.json

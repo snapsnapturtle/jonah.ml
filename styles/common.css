@@ -1,0 +1,81 @@
+:root {
+    --background: rgb(0, 0, 0);
+    --background-invert: rgb(249, 250, 251);
+    --text-primary: rgb(234, 234, 234);
+    --text-primary-invert: rgb(56, 59, 63);
+    --text-link: rgb(255, 87, 144);
+    --font-family: 'Recursive', monospace;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--background);
+    margin: 3rem 1.5rem 2rem;
+    padding: 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: var(--font-family);
+}
+
+p {
+    margin: 1.5rem 0;
+}
+
+b {
+    font-weight: 600;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--text-link);
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.whois {
+    font-weight: 800;
+}
+
+@media (min-width: 812px) {
+    body {
+        font-size: 1.1rem;
+        margin: 5rem;
+    }
+
+    main {
+        max-width: 50rem;
+    }
+
+    p {
+        margin: 2rem 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        font-size: 1.2rem;
+        margin: 6rem;
+    }
+
+    p {
+        margin: 3rem 0;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: var(--background-invert);
+        color: var(--text-primary-invert);
+    }
+}
+
+@import url('./cursor.css');

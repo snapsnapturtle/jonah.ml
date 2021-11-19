@@ -1,0 +1,23 @@
+.cursor {
+    display: inline-block;
+    width: 0.8rem;
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: 0.125rem solid var(--text-primary);
+}
+
+.cursor--blinking {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .cursor {
+        border-bottom-color: var(--text-primary-invert);
+    }
+}

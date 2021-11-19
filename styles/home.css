@@ -1,0 +1,29 @@
+@import url('./common.css');
+
+.contact {
+    margin: 1.5rem 0;
+}
+
+.contact__intro {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.contact__link {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+}
+
+@media (min-width: 812px) {
+    .contact__link {
+        margin-top: 0;
+        margin-left: 2.2rem;
+        display: inline-block;
+    }
+
+    .contact__intro {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
