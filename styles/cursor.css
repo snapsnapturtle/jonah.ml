@@ -7,12 +7,12 @@
 }
 
 .cursor--blinking {
-    animation: blink-animation 1s steps(2, start) infinite;
+    animation: blink-animation 1s step-start 0s infinite;
 }
 
 @keyframes blink-animation {
-    to {
-        visibility: hidden;
+    50% {
+        opacity: 0;
     }
 }
 
