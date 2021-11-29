@@ -1,11 +1,4 @@
-:root {
-    --background: rgb(0, 0, 0);
-    --background-invert: rgb(249, 250, 251);
-    --text-primary: rgb(234, 234, 234);
-    --text-primary-invert: rgb(56, 59, 63);
-    --text-link: rgb(255, 87, 144);
-    --font-family: 'Recursive', monospace;
-}
+@import url('./variables.css');
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -34,11 +27,15 @@ a:link,
 a:visited {
     color: var(--text-link);
     text-decoration: none;
+    border-radius: 0.125rem;
+    border: transparent solid 0.125rem;
 }
 
 a:hover,
 a:active {
-    text-decoration: underline;
+    color: var(--text-primary);
+    background: var(--text-link);
+    border-color: var(--text-link);
 }
 
 .whois {
@@ -68,13 +65,6 @@ a:active {
 
     p {
         margin: 3rem 0;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background: var(--background-invert);
-        color: var(--text-primary-invert);
     }
 }
 

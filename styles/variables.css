@@ -1,0 +1,13 @@
+:root {
+    --background: rgb(0, 0, 0);
+    --text-primary: rgb(244, 244, 244);
+    --text-link: rgb(255, 87, 144);
+    --font-family: 'Recursive', monospace;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: rgb(249, 250, 251);
+        --text-primary: rgb(56, 59, 63);
+    }
+}
