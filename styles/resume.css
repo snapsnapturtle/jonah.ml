@@ -1,0 +1,61 @@
+@import url('./common.css');
+
+.job {
+    margin-bottom: 4rem;
+}
+
+.job__position {
+    margin-bottom: 1rem;
+}
+
+.job__position__title {
+    display: block;
+    flex-shrink: 0;
+}
+
+.job__position__separator {
+    display: none;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.job__position__time-at {
+    flex-shrink: 0;
+}
+
+.job__description {
+    font-size: 0.875em;
+    margin-bottom: 3rem;
+}
+
+.job__description p {
+    margin: 1rem 0;
+}
+
+.job__description ul {
+    margin: 1rem 0;
+    padding-left: 1rem;
+    list-style-type: '* ';
+}
+
+.job__description ul > li {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 812px) {
+    .job__position {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .job__position__separator {
+        display: inline-block;
+    }
+
+    .job__description ul {
+        padding-left: 1.5rem;
+    }
+}

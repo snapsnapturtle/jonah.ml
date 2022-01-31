@@ -1,4 +1,4 @@
-@import url('./variables.css');
+@import url('./variables.scss');
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -27,15 +27,20 @@ a:link,
 a:visited {
     color: var(--text-link);
     text-decoration: none;
-    border-radius: 0.125rem;
-    border: transparent solid 0.125rem;
+    text-shadow: 0 0 2px var(--text-link-shadow), 0 0 5px var(--text-link-shadow);
+}
+
+a::before {
+    content: '[';
+}
+
+a::after {
+    content: ']';
 }
 
 a:hover,
 a:active {
-    color: var(--text-primary);
-    background: var(--text-link);
-    border-color: var(--text-link);
+    filter: brightness(300%);
 }
 
 .whois {
@@ -67,5 +72,4 @@ a:active {
         margin: 3rem 0;
     }
 }
-
 @import url('./cursor.css');
