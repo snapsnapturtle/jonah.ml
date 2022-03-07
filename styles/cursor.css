@@ -15,9 +15,3 @@
         opacity: 0;
     }
 }
-
-@media (prefers-color-scheme: light) {
-    .cursor {
-        border-bottom-color: var(--text-primary-invert);
-    }
-}

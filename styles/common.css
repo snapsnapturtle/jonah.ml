@@ -27,29 +27,28 @@ a:link,
 a:visited {
     color: var(--text-link);
     text-decoration: none;
-    text-shadow: 0 0 2px var(--text-link-shadow), 0 0 5px var(--text-link-shadow);
-}
-
-a::before {
-    content: '[';
-}
-
-a::after {
-    content: ']';
+    transition: box-shadow 75ms;
+    box-shadow: none;
 }
 
 a:hover,
 a:active {
-    filter: brightness(300%);
+    text-decoration: none;
+    box-shadow: var(--text-link) 0 0.1rem 0 0;
 }
 
 .whois {
     font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.whois a {
+    font-style: italic;
 }
 
 @media (min-width: 812px) {
     body {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin: 5rem;
     }
 
@@ -62,14 +61,11 @@ a:active {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 2560px) {
     body {
-        font-size: 1.2rem;
-        margin: 6rem;
-    }
-
-    p {
-        margin: 3rem 0;
+        margin: 5rem auto;
+        max-width: calc(1440px - 10rem);
     }
 }
+
 @import url('./cursor.css');

@@ -1,22 +1,7 @@
 :root {
-    --pink-3: #993456;
-    --pink-4: #cc4672;
-    --pink-5: #ff578f;
-    --pink-6: #ff79a5;
-    --pink-7: #ff9abc;
-    --pink-8: #ffbcd2;
-    --pink-9: #ffdde9;
-
-    --background: rgb(0, 0, 0);
-    --text-primary: rgb(244, 244, 244);
-    --text-link: rgb(255, 87, 144);
-    --text-link-shadow: #993456;
+    --background: #0d1117;
+    --text-primary: hsl(0, 0%, 96%);
+    --text-link: hsl(333, 100%, 52%);
+    --text-secondary: hsl(212, 9%, 58%);
     --font-family: 'Recursive', monospace;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --background: rgb(249, 250, 251);
-        --text-primary: rgb(56, 59, 63);
-    }
 }

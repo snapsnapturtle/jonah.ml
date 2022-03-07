@@ -1,61 +1,87 @@
 @import url('./common.css');
 
+.company {
+    margin-top: 2rem;
+}
+
+.company:first-of-type {
+    margin-top: 0;
+}
+
+.company__description a {
+    font-weight: 800;
+}
+
+.company__technologies {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
 .job {
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template: auto auto auto / 1rem auto auto;
+    grid-template-areas:
+        "emoji title"
+        "emoji time_at"
+        ". description";
+    grid-column-gap: 1rem;
+
 }
 
-.job__position {
-    margin-bottom: 1rem;
+.job__emoji {
+    grid-area: emoji;
 }
 
-.job__position__title {
+.job__title {
+    grid-area: title;
     display: block;
-    flex-shrink: 0;
 }
 
-.job__position__separator {
-    display: none;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-}
-
-.job__position__time-at {
-    flex-shrink: 0;
+.job__time-at {
+    grid-area: time_at;
+    color: var(--text-secondary);
+    display: block;
+    font-size: 0.875em;
 }
 
 .job__description {
-    font-size: 0.875em;
-    margin-bottom: 3rem;
-}
-
-.job__description p {
-    margin: 1rem 0;
+    grid-area: description;
+    font-size: 0.9375em;
 }
 
 .job__description ul {
-    margin: 1rem 0;
-    padding-left: 1rem;
-    list-style-type: '* ';
+    margin: 0.5rem 0;
+    padding-left: 0;
+    list-style-type: '';
 }
 
 .job__description ul > li {
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
+}
+
+.links {
+    margin-top: 3rem;
 }
 
 @media (min-width: 812px) {
-    .job__position {
-        display: flex;
-        justify-content: space-between;
+    .company {
+        margin-top: 3rem;
     }
 
-    .job__position__separator {
-        display: inline-block;
+    .job {
+        grid-template: auto auto auto / auto auto 1fr;
+        grid-template-areas:
+        "emoji title time_at"
+        ". description description";
     }
 
-    .job__description ul {
-        padding-left: 1.5rem;
+    .job__time-at {
+        font-size: 1em;
     }
+
+    .job__description {
+        font-size: 0.875em;
+    }
+
 }

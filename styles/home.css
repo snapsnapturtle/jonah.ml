@@ -1,29 +1,23 @@
 @import url('./common.css');
 
 .contact {
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-gap: 0.5rem 0;
+    grid-template: repeat(4, auto) / auto;
 }
 
-.contact__intro {
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-.contact__link {
-    display: block;
-    margin-left: 1rem;
-    margin-top: 0.4rem;
+.contact__link-emoji {
+    margin-right: 0.5rem;
 }
 
 @media (min-width: 812px) {
-    .contact__link {
-        margin-top: 0;
-        margin-left: 1rem;
-        display: inline-block;
+    .contact {
+        grid-gap: 0 1.75rem;
+        grid-template: auto / repeat(4, auto) 1fr;
     }
 
-    .contact__intro {
-        display: inline-block;
-        margin-bottom: 0;
+    .contact__link-emoji {
+        margin-right: 0.25rem;
     }
 }
