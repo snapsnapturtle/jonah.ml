@@ -22,11 +22,10 @@
     display: grid;
     grid-template: auto auto auto / 1rem auto auto;
     grid-template-areas:
-        "emoji title"
-        "emoji time_at"
-        ". description";
+        'emoji title'
+        'emoji time_at'
+        '. description';
     grid-column-gap: 1rem;
-
 }
 
 .job__emoji {
@@ -72,8 +71,8 @@
     .job {
         grid-template: auto auto auto / auto auto 1fr;
         grid-template-areas:
-        "emoji title time_at"
-        ". description description";
+            'emoji title time_at'
+            '. description description';
     }
 
     .job__time-at {
@@ -83,5 +82,4 @@
     .job__description {
         font-size: 0.875em;
     }
-
 }
