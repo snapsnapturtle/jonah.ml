@@ -1,7 +1,8 @@
 :root {
     --background: #0d1117;
-    --text-primary: hsl(0, 0%, 96%);
-    --text-link: hsl(333, 100%, 52%);
-    --text-secondary: hsl(212, 9%, 58%);
+    --text-primary: #f5f5f5;
+    --text-link: #f43e5c;
+    --text-secondary: #8a939e;
+    --fancy-gradient: linear-gradient(100deg, #f97316, #f43f5e, #d946ef, #0ea5e9);
     --font-family: 'Recursive', monospace;
 }
