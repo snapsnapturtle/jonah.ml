@@ -2,7 +2,7 @@ name: build-and-deploy
 on:
     push:
         branches:
-            - master
+            - main
     pull_request:
         branches:
             - '*'
@@ -23,7 +23,7 @@ jobs:
               run: npm run build
 
     deploy:
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
