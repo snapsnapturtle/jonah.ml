@@ -48,7 +48,7 @@
 
 .job__description ul {
     margin: 0.5rem 0;
-    padding-left: 0;
+    padding-left: 1.5rem;
     list-style-type: '-  ';
 }
 
@@ -72,11 +72,5 @@
 
     .job__title a {
         display: inline;
-    }
-
-    .job__description ul {
-        margin: 0.5rem 0;
-        padding-left: 1.5rem;
-        list-style-type: '-  ';
     }
 }
