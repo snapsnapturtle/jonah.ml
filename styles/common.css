@@ -71,6 +71,6 @@ a:active {
 @media (min-width: 2560px) {
     body {
         margin: 7.5rem auto;
-        max-width: 80ch
+        max-width: 80ch;
     }
 }
