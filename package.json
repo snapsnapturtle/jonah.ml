@@ -24,7 +24,7 @@
     "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
     "devDependencies": {
         "@parcel/transformer-inline-string": "^2.8.0",
-        "@parcel/transformer-sass": "^2.8.0",
+        "@parcel/transformer-sass": "^2.8.1",
         "husky": "^8.0.2",
         "lint-staged": "^13.1.0",
         "parcel": "^2.8.0",
