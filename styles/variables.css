@@ -1,0 +1,8 @@
+:root {
+    --background: rgba(10, 2, 25, 1);
+    --text-primary: rgba(255, 255, 255, 0.8);
+    --text-link: rgba(255, 255, 255, 1);
+    --text-secondary: rgba(255, 255, 255, 0.4);
+    --fancy-gradient: linear-gradient(100deg, #FF377F 0%, #C984FF 44%, #3971FF 81%, #3971FF 100%);
+    --font-family: 'Recursive', monospace;
+}
