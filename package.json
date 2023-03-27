@@ -28,7 +28,7 @@
         "husky": "^8.0.3",
         "lint-staged": "^13.2.0",
         "parcel": "^2.8.3",
-        "prettier": "^2.8.6"
+        "prettier": "^2.8.7"
     },
     "lint-staged": {
         "*.{js,css,md,html}": "prettier --write"
