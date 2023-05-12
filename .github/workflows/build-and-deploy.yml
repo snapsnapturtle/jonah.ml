@@ -23,18 +23,18 @@ jobs:
               run: npm run build
 
     auto-merge:
-      if: ${{ github.actor == 'dependabot[bot]' }}
-      runs-on: ubuntu-latest
-      needs: build
-      permissions:
-        pull-requests: write
-        contents: write
-      steps:
-        - uses: fastify/github-action-merge-dependabot@v3
-          with:
-            target: minor
-            pr-number: ${{ github.event.inputs.pr-number }}
-            github-token: ${{ secrets.REPO_COMMIT_TOKEN }}
+        if: ${{ github.actor == 'dependabot[bot]' }}
+        runs-on: ubuntu-latest
+        needs: build
+        permissions:
+            pull-requests: write
+            contents: write
+        steps:
+            - uses: fastify/github-action-merge-dependabot@v3
+              with:
+                  target: minor
+                  pr-number: ${{ github.event.inputs.pr-number }}
+                  github-token: ${{ secrets.REPO_COMMIT_TOKEN }}
 
     deploy:
         needs: build
