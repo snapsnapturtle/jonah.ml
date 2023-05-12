@@ -1,0 +1,22 @@
+name: 'Dependabot auto merge'
+
+on:
+    pull_request:
+
+jobs:
+    build:
+        uses: ./.github/workflows/build.yml
+        secrets: inherit
+    auto-merge:
+        if: ${{ github.actor == 'dependabot[bot]' }}
+        needs: build
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
+        steps:
+            - uses: fastify/github-action-merge-dependabot@v3
+              with:
+                  target: minor
+                  pr-number: ${{ github.event.inputs.pr-number }}
+                  github-token: ${{ secrets.REPO_COMMIT_TOKEN }}
