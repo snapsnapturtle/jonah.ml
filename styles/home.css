@@ -11,6 +11,14 @@
     margin-right: 0.5rem;
 }
 
+.contact__link--resume:hover > span {
+    display: none;
+}
+
+.contact__link--resume:hover:before {
+    content: 'Résumé';
+}
+
 @media (min-width: 812px) {
     .contact {
         grid-gap: 0 1.75rem;
