@@ -3,6 +3,6 @@
     --text-primary: rgba(255, 255, 255, 0.8);
     --text-link: rgba(255, 255, 255, 1);
     --text-secondary: rgba(255, 255, 255, 0.4);
-    --fancy-gradient: linear-gradient(100deg, #ff377f 0%, #c984ff 44%, #3971ff 81%, #3971ff 100%);
+    --fancy-gradient: linear-gradient(100deg, #ff377f 0%, #c984ff 15%, #3971ff 26%, #3971ff 33%, #3971ff 48%, #c984ff 59%, #ff377f 66%, #c984ff 81%, #3971ff 91%, #3971ff 100%);
     --font-family: 'Recursive', monospace;
 }

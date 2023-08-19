@@ -47,12 +47,13 @@ a:active {
     display: inline-block;
     background: var(--fancy-gradient);
     background-clip: text;
+    background-size: 300% auto;
     -webkit-text-fill-color: transparent;
 }
 
 .whois a:hover {
     box-shadow: none;
-    animation: shake-hard 500ms cubic-bezier(0.75, 0, 0.5, 1) infinite;
+    animation: move-gradient 2s linear infinite;
 }
 
 @media (min-width: 812px) {
