@@ -14,7 +14,7 @@ interface Metric {
 }
 
 export function sendToVercelAnalytics(metric: Metric): void {
-    const analyticsId = process.env.REACT_APP_VERCEL_ANALYTICS_ID;
+    const analyticsId = process.env.VERCEL_ANALYTICS_ID;
     if (!analyticsId) {
         return;
     }
