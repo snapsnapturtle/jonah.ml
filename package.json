@@ -23,11 +23,13 @@
     },
     "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
     "dependencies": {
-        "@vercel/analytics": "^1.0.2"
+        "@vercel/analytics": "^1.0.2",
+        "web-vitals": "^3.4.0"
     },
     "devDependencies": {
         "@parcel/transformer-inline-string": "^2.9.3",
         "@parcel/transformer-sass": "^2.9.3",
+        "@types/node": "^20.5.7",
         "husky": "^8.0.3",
         "lint-staged": "^14.0.1",
         "parcel": "^2.9.3",
