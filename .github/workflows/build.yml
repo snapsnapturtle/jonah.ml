@@ -3,7 +3,7 @@ name: Build
 on:
     workflow_call:
     push:
-        branches: [ main ]
+        branches: [main]
 jobs:
     build-and-test:
         runs-on: ubuntu-latest
