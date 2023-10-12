@@ -27,12 +27,12 @@
         "web-vitals": "^3.5.0"
     },
     "devDependencies": {
-        "@parcel/transformer-inline-string": "^2.9.3",
-        "@parcel/transformer-sass": "^2.9.3",
+        "@parcel/transformer-inline-string": "^2.10.0",
+        "@parcel/transformer-sass": "^2.10.0",
         "@types/node": "^20.8.4",
         "husky": "^8.0.3",
         "lint-staged": "^14.0.1",
-        "parcel": "^2.9.3",
+        "parcel": "^2.10.0",
         "prettier": "^3.0.3"
     },
     "lint-staged": {
