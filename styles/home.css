@@ -1,7 +1,6 @@
 @import url('./common.css');
 
 .contact {
-    margin-top: 1.5rem;
     display: grid;
     grid-gap: 0.5rem 0;
     grid-template: repeat(4, auto) / auto;

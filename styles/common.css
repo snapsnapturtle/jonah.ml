@@ -17,8 +17,10 @@ body {
     font-family: var(--font-family);
 }
 
-p {
+p, nav {
     margin: 1.5rem 0;
+    background: var(--background-paragraph);
+    border-radius: 0.25rem;
 }
 
 a,
