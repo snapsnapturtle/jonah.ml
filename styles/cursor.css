@@ -1,9 +1,13 @@
+.terminal-indicator {
+    font-weight: 800;
+}
+
 .cursor {
     display: inline-block;
     width: 0.8rem;
     height: 1rem;
     line-height: 1rem;
-    border-bottom: 0.125rem solid var(--text-primary);
+    border-bottom: 0.15rem solid var(--text-primary);
 }
 
 .cursor--blinking {
