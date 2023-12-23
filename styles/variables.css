@@ -19,15 +19,3 @@
     );
     --font-family: 'Recursive', monospace;
 }
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --background: rgb(255, 255, 255) radial-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 0px);
-        --background-paragraph: rgba(255, 255, 255, 0.5);
-        --text-primary: rgb(36, 41, 47);
-        --text-link: rgb(255, 79, 0);
-        --text-secondary: rgba(255, 255, 255, 0.4);
-        --fancy-gradient: rgb(255, 79, 0);
-        --font-family: 'Recursive', monospace;
-    }
-}
