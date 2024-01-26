@@ -9,7 +9,7 @@
         "build": "parcel build",
         "prettier": "npx prettier --write .",
         "lint": "npx prettier --check .",
-        "prepare": "husky install"
+        "prepare": "husky"
     },
     "repository": {
         "type": "git",
@@ -30,12 +30,12 @@
         "@parcel/transformer-inline-string": "^2.11.0",
         "@parcel/transformer-sass": "^2.11.0",
         "@types/node": "^20.11.6",
-        "husky": "^8.0.3",
+        "husky": "^9.0.6",
         "lint-staged": "^15.2.0",
         "parcel": "^2.11.0",
         "prettier": "^3.2.4"
     },
     "lint-staged": {
-        "*.{js,css,md,html}": "prettier --write"
+        "**/*": "prettier --write --ignore-unknown"
     }
 }
