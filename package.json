@@ -9,7 +9,7 @@
         "build": "parcel build",
         "prettier": "npx prettier --write .",
         "lint": "npx prettier --check .",
-        "prepare": "husky install"
+        "prepare": "husky"
     },
     "repository": {
         "type": "git",
@@ -36,6 +36,7 @@
         "prettier": "^3.2.4"
     },
     "lint-staged": {
-        "*.{js,css,md,html}": "prettier --write"
+        "*.{js,css,md,html}": "prettier --write",
+        "*.{js,css,md}": "prettier --write"
     }
 }
