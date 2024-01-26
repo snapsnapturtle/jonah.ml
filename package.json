@@ -24,7 +24,7 @@
     "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
     "dependencies": {
         "@vercel/analytics": "^1.1.2",
-        "web-vitals": "^3.5.1"
+        "web-vitals": "^3.5.2"
     },
     "devDependencies": {
         "@parcel/transformer-inline-string": "^2.11.0",
