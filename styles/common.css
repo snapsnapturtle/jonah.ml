@@ -47,17 +47,19 @@ a:active {
     font-size: 1.25rem;
 }
 
-.whois a {
+.whois {
+    color: var(--text-link);
+}
+
+.whois a,
+.whois a:hover {
     display: inline-block;
     background: var(--fancy-gradient);
     background-clip: text;
     background-size: 300% auto;
     -webkit-text-fill-color: transparent;
-}
-
-.whois a:hover {
+    animation: move-gradient 2s linear infinite reverse;
     box-shadow: none;
-    animation: move-gradient 2s linear infinite;
 }
 
 @media (min-width: 812px) {
