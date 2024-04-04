@@ -29,13 +29,10 @@ a:link,
 a:visited {
     color: var(--text-link);
     text-decoration: none;
-    transition: box-shadow 75ms;
-    box-shadow: transparent 0 0.1rem 0 0;
 }
 
 a:hover {
-    text-decoration: none;
-    box-shadow: var(--text-link) 0 0.1rem 0 0;
+    text-decoration: underline;
 }
 
 a:active {
