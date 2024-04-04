@@ -1,6 +1,6 @@
 .terminal-indicator {
     font-weight: 800;
-    color: var(--text-link);
+    color: var(--text-emphasis);
 }
 
 .cursor {
@@ -8,7 +8,7 @@
     width: 0.8rem;
     height: 1rem;
     line-height: 1rem;
-    border-bottom: 0.15rem solid var(--text-link);
+    border-bottom: 0.15rem solid var(--text-emphasis);
 }
 
 .cursor--blinking {

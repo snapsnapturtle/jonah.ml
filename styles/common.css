@@ -48,7 +48,7 @@ a:active {
 }
 
 .whois {
-    color: var(--text-link);
+    color: var(--text-emphasis);
 }
 
 .whois a,
