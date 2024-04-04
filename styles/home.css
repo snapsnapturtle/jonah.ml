@@ -8,6 +8,8 @@
 
 .contact__link-emoji {
     margin-right: 0.5rem;
+    /* force emojis to be rendered at 100% opacity */
+    color: black;
 }
 
 .contact__link--resume:hover > span {
