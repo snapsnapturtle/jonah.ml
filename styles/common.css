@@ -56,7 +56,7 @@ a:active {
     display: inline-block;
     background: var(--fancy-gradient);
     background-clip: text;
-    background-size: 300% auto;
+    background-size: 200% auto;
     -webkit-text-fill-color: transparent;
     animation: move-gradient 2s linear infinite reverse;
     box-shadow: none;
