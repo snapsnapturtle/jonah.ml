@@ -29,6 +29,7 @@ a:link,
 a:visited {
     color: var(--text-link);
     text-decoration: none;
+    text-underline-offset: 0.3rem;
 }
 
 a:hover {
