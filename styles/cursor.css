@@ -1,16 +1,16 @@
 .terminal-indicator {
-    font-weight: 800;
-    color: var(--text-emphasis);
+  font-weight: 800;
+  color: var(--text-emphasis);
 }
 
 .cursor {
-    display: inline-block;
-    width: 0.8rem;
-    height: 1rem;
-    line-height: 1rem;
-    border-bottom: 0.15rem solid var(--text-emphasis);
+  display: inline-block;
+  width: 0.8rem;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 0.15rem solid var(--text-emphasis);
 }
 
 .cursor--blinking {
-    animation: blink 1s step-start 0s infinite;
+  animation: blink 1s step-start 0s infinite;
 }

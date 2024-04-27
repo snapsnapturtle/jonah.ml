@@ -1,41 +1,41 @@
 {
-    "name": "jonah.ml",
-    "version": "1.0.0",
-    "description": "Repository for jonah.ml",
-    "source": "index.html",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
-    "scripts": {
-        "dev": "parcel",
-        "build": "parcel build",
-        "prettier": "npx prettier --write .",
-        "lint": "npx prettier --check .",
-        "prepare": "husky"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/snapsnapturtle/jonah.ml.git"
-    },
-    "keywords": [],
-    "author": "Jonah Möller <jonah.moeller@gmail.com>",
-    "license": "UNLICENSED",
-    "bugs": {
-        "url": "https://github.com/snapsnapturtle/jonah.ml/issues"
-    },
-    "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
-    "dependencies": {
-        "@vercel/analytics": "^1.2.2",
-        "web-vitals": "^3.5.2"
-    },
-    "devDependencies": {
-        "@parcel/transformer-inline-string": "^2.12.0",
-        "@parcel/transformer-sass": "^2.12.0",
-        "@types/node": "^20.12.7",
-        "husky": "^9.0.11",
-        "lint-staged": "^15.2.2",
-        "parcel": "^2.12.0",
-        "prettier": "^3.2.5"
-    },
-    "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown"
-    }
+  "name": "jonah.ml",
+  "version": "1.0.0",
+  "description": "Repository for jonah.ml",
+  "source": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build",
+    "prettier": "npx prettier --write .",
+    "lint": "npx prettier --check .",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snapsnapturtle/jonah.ml.git"
+  },
+  "keywords": [],
+  "author": "Jonah Möller <jonah.moeller@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/snapsnapturtle/jonah.ml/issues"
+  },
+  "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
+  "dependencies": {
+    "@vercel/analytics": "^1.2.2",
+    "web-vitals": "^3.5.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "@types/node": "^20.12.7",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "parcel": "^2.12.0",
+    "prettier": "^3.2.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }
