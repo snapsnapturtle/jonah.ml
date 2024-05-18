@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Repository for jonah.ml",
   "source": "index.html",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
   "type": "module",
   "scripts": {
     "dev": "vite",
