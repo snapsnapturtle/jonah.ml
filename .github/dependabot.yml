@@ -4,11 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    groups:
-      parcel:
-        patterns:
-          - "@parcel/*"
-          - "parcel"
 
   - package-ecosystem: "github-actions"
     directory: "/"
