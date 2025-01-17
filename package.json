@@ -9,8 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "prettier": "npx prettier --write .",
-    "lint": "npx prettier --check .",
-    "prepare": "husky"
+    "lint": "npx prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,7 @@
   "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
   "devDependencies": {
     "@types/node": "^22.10.7",
-    "husky": "^9.1.7",
+    "lefthook": "^1.10.8",
     "lint-staged": "^15.4.1",
     "prettier": "^3.4.2",
     "vite": "^6.0.7"
