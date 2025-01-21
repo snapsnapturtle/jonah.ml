@@ -27,7 +27,7 @@
     "lefthook": "^1.10.9",
     "lint-staged": "^15.4.1",
     "prettier": "^3.4.2",
-    "vite": "^6.0.7"
+    "vite": "^6.0.10"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
