@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
   "devDependencies": {
-    "@types/node": "^22.14.0",
+    "@types/node": "^22.14.1",
     "lefthook": "^1.11.8",
     "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
