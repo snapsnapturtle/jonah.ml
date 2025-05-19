@@ -24,7 +24,7 @@
   "homepage": "https://github.com/snapsnapturtle/jonah.ml#readme",
   "devDependencies": {
     "@types/node": "^22.15.18",
-    "lefthook": "^1.11.12",
+    "lefthook": "^1.11.13",
     "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
     "vite": "^6.3.5"
