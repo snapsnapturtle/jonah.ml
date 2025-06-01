@@ -3,7 +3,6 @@
   --text-primary: rgba(255, 255, 255, 0.8);
   --text-emphasis: rgb(255, 255, 255);
   --text-link: rgb(255, 255, 255);
-  --focus-outline-color: rgb(255, 79, 0);
   --fancy-gradient: linear-gradient(
     110deg,
     hsl(203deg 100% 58%) 0%,
