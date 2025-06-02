@@ -1,9 +1,0 @@
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: rgba(232, 230, 217, 0.2);
-    --text-primary: rgb(76, 84, 97);
-    --text-emphasis: rgb(0, 0, 0);
-    --text-link: rgb(7, 81, 207);
-    --fancy-gradient: rgb(7, 81, 207);
-  }
-}
