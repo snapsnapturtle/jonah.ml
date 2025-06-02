@@ -4,10 +4,7 @@ import type { LinkProps } from "@tanstack/react-router";
 function HeaderLink(props: LinkProps) {
   return (
     <Link
-      className="text-sm
-      hover:no-underline
-       select-none tracking-tight rounded-sm text-nowrap transition-colors duration-75 text-black dark:text-offgray-50 hover:bg-offgray-100/50 dark:hover:bg-offgray-500/10 px-3 py-1
-      "
+      className="hover:no-underline select-none tracking-tight rounded-sm text-nowrap transition-colors duration-75 text-black dark:text-offgray-50 hover:bg-offgray-100/50 dark:hover:bg-offgray-500/10 px-3 py-1"
       viewTransition={{ types: ["fade"] }}
       {...props}
     />
