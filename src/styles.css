@@ -5,6 +5,8 @@
 
 @theme {
   --font-sans: "iA Writer Quattro", monospace;
+  --font-mono: "iA Writer Duo", monospace;
+
   --text-md: 1.125rem;
   --text-md--line-height: 144%;
 
@@ -58,6 +60,8 @@
   --animate-fadeIn: fadeIn 0.1s ease;
   --animate-fadeOut: fadeOut 0.1s ease;
   --animate-marquee: marquee 55s linear infinite;
+
+  --color-gradient: linear-gradient(#000, #0f0, 90deg);
 
   @keyframes blink {
     0%,
@@ -144,24 +148,23 @@
   @keyframes pageIn {
     from {
       opacity: 0;
-      transform: translateX(1%);
+      transform: translateY(6px);
     }
 
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
   @keyframes pageOut {
     from {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
 
     to {
       opacity: 0;
-      transform: translateX(-1%);
     }
   }
 }
@@ -181,7 +184,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   @apply m-0 font-sans text-offgray-800 font-medium;
-  /* should ideally be, but doesn't work with transparent header @apply bg-cream-100/20; */
   @apply bg-cream-50;
 
   @variant dark {
@@ -209,6 +211,78 @@ body {
       @variant hover {
         @apply text-blue-200;
       }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    border: 1px solid;
+    border-radius: 8px;
+    overflow: clip;
+
+    @apply bg-offgray-50 border-offgray-100;
+
+    @variant dark {
+      @apply bg-offgray-1000 border-offgray-900;
+    }
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  code {
+    @apply -mx-0.5 py-0.5 px-1 rounded-sm;
+    @apply font-mono text-sm [overflow-wrap:_break-word];
+    @apply bg-accent-blue/10 dark:bg-blue-400/10 text-black dark:text-white;
+  }
+
+  pre {
+    @apply relative border bg-white border-accent-blue/30;
+
+    @variant dark {
+      @apply bg-offgray-950/60 border-blue-300/20;
+    }
+
+    code {
+      all: initial;
+      direction: ltr !important;
+
+      @apply block font-mono font-medium text-sm p-2 text-offgray-900;
+
+      @variant dark {
+        @apply text-offgray-100;
+      }
+    }
+  }
+
+  .heading1 {
+    @apply font-semibold text-2xl tracking-tight whitespace-pre-wrap;
+    @apply text-accent-blue;
+
+    @apply mt-8 mb-4;
+
+    @variant dark {
+      @apply text-blue-300;
+    }
+
+    @variant md {
+      @apply text-3xl;
+    }
+  }
+
+  .heading2 {
+    @apply font-semibold text-xl tracking-tight whitespace-pre-wrap;
+    @apply text-accent-blue;
+
+    @apply mt-8 mb-4;
+
+    @variant dark {
+      @apply text-blue-300;
+    }
+
+    @variant md {
+      @apply text-2xl;
     }
   }
 }
