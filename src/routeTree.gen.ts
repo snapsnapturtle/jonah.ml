@@ -10,113 +10,85 @@
 
 // Import Routes
 
-import { Route as rootRoute } from "./routes/__root";
-import { Route as IndexImport } from "./routes/index";
-import { Route as ThoughtsIndexImport } from "./routes/thoughts/index";
-import { Route as ThoughtsImplementingAnArchitectureReviewImport } from "./routes/thoughts/implementing-an-architecture-review";
+import { Route as rootRoute } from './routes/__root'
+import { Route as IndexImport } from './routes/index'
+import { Route as ThoughtsIndexImport } from './routes/thoughts/index'
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRoute,
-} as any);
+} as any)
 
 const ThoughtsIndexRoute = ThoughtsIndexImport.update({
-  id: "/thoughts/",
-  path: "/thoughts/",
+  id: '/thoughts/',
+  path: '/thoughts/',
   getParentRoute: () => rootRoute,
-} as any);
-
-const ThoughtsImplementingAnArchitectureReviewRoute =
-  ThoughtsImplementingAnArchitectureReviewImport.update({
-    id: "/thoughts/implementing-an-architecture-review",
-    path: "/thoughts/implementing-an-architecture-review",
-    getParentRoute: () => rootRoute,
-  } as any);
+} as any)
 
 // Populate the FileRoutesByPath interface
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/": {
-      id: "/";
-      path: "/";
-      fullPath: "/";
-      preLoaderRoute: typeof IndexImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/thoughts/implementing-an-architecture-review": {
-      id: "/thoughts/implementing-an-architecture-review";
-      path: "/thoughts/implementing-an-architecture-review";
-      fullPath: "/thoughts/implementing-an-architecture-review";
-      preLoaderRoute: typeof ThoughtsImplementingAnArchitectureReviewImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/thoughts/": {
-      id: "/thoughts/";
-      path: "/thoughts";
-      fullPath: "/thoughts";
-      preLoaderRoute: typeof ThoughtsIndexImport;
-      parentRoute: typeof rootRoute;
-    };
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/thoughts/': {
+      id: '/thoughts/'
+      path: '/thoughts'
+      fullPath: '/thoughts'
+      preLoaderRoute: typeof ThoughtsIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute;
-  "/thoughts/implementing-an-architecture-review": typeof ThoughtsImplementingAnArchitectureReviewRoute;
-  "/thoughts": typeof ThoughtsIndexRoute;
+  '/': typeof IndexRoute
+  '/thoughts': typeof ThoughtsIndexRoute
 }
 
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute;
-  "/thoughts/implementing-an-architecture-review": typeof ThoughtsImplementingAnArchitectureReviewRoute;
-  "/thoughts": typeof ThoughtsIndexRoute;
+  '/': typeof IndexRoute
+  '/thoughts': typeof ThoughtsIndexRoute
 }
 
 export interface FileRoutesById {
-  __root__: typeof rootRoute;
-  "/": typeof IndexRoute;
-  "/thoughts/implementing-an-architecture-review": typeof ThoughtsImplementingAnArchitectureReviewRoute;
-  "/thoughts/": typeof ThoughtsIndexRoute;
+  __root__: typeof rootRoute
+  '/': typeof IndexRoute
+  '/thoughts/': typeof ThoughtsIndexRoute
 }
 
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths:
-    | "/"
-    | "/thoughts/implementing-an-architecture-review"
-    | "/thoughts";
-  fileRoutesByTo: FileRoutesByTo;
-  to: "/" | "/thoughts/implementing-an-architecture-review" | "/thoughts";
-  id:
-    | "__root__"
-    | "/"
-    | "/thoughts/implementing-an-architecture-review"
-    | "/thoughts/";
-  fileRoutesById: FileRoutesById;
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/thoughts'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/thoughts'
+  id: '__root__' | '/' | '/thoughts/'
+  fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  ThoughtsImplementingAnArchitectureReviewRoute: typeof ThoughtsImplementingAnArchitectureReviewRoute;
-  ThoughtsIndexRoute: typeof ThoughtsIndexRoute;
+  IndexRoute: typeof IndexRoute
+  ThoughtsIndexRoute: typeof ThoughtsIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ThoughtsImplementingAnArchitectureReviewRoute:
-    ThoughtsImplementingAnArchitectureReviewRoute,
   ThoughtsIndexRoute: ThoughtsIndexRoute,
-};
+}
 
 export const routeTree = rootRoute
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
 
 /* ROUTE_MANIFEST_START
 {
@@ -125,15 +97,11 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/thoughts/implementing-an-architecture-review",
         "/thoughts/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
-    },
-    "/thoughts/implementing-an-architecture-review": {
-      "filePath": "thoughts/implementing-an-architecture-review.tsx"
     },
     "/thoughts/": {
       "filePath": "thoughts/index.tsx"

@@ -1,4 +1,4 @@
-import { Link, createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/thoughts/")({
   component: RouteComponent,
@@ -7,16 +7,8 @@ export const Route = createFileRoute("/thoughts/")({
 function RouteComponent() {
   return (
     <div>
-      <ul>
-        <li>
-          <Link
-            to="/thoughts/implementing-an-architecture-review"
-            viewTransition={{ types: ["fade"] }}
-          >
-            Implementing an architecutre review
-          </Link>
-        </li>
-      </ul>
+      Currently writing the first thing on the transition to the Chief of Staff
+      role.
     </div>
   );
 }
