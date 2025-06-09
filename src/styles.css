@@ -1,0 +1,286 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight.css" layer(base);
+
+@import "./styles/fonts.css";
+@import "./styles/view-transitions.css";
+
+@theme {
+  --font-sans: "iA Writer Quattro", monospace;
+  --font-mono: "iA Writer Duo", monospace;
+
+  --text-md: 1.125rem;
+  --text-md--line-height: 144%;
+
+  --color-blue-50: oklch(97% 0.014 254.604);
+  --color-blue-100: oklch(93.2% 0.032 255.585);
+  --color-blue-200: oklch(88.2% 0.059 254.128);
+  --color-blue-300: oklch(80.9% 0.105 251.813);
+  --color-blue-400: oklch(70.7% 0.165 254.624);
+  --color-blue-500: oklch(62.3% 0.214 259.815);
+  --color-blue-600: oklch(54.6% 0.245 262.881);
+  --color-blue-700: oklch(48.8% 0.243 264.376);
+  --color-blue-800: oklch(42.4% 0.199 265.638);
+  --color-blue-900: oklch(37.9% 0.146 265.522);
+  --color-blue-950: oklch(28.2% 0.091 267.935);
+
+  --color-cream-50: #f5f4ef;
+  --color-cream-100: #e8e6d9;
+  --color-cream-200: #d9d5bf;
+  --color-cream-300: #cfcaaf;
+  --color-cream-400: #bab38c;
+  --color-cream-500: #aba273;
+  --color-cream-600: #998f5c;
+  --color-cream-700: #80774d;
+  --color-cream-800: #665f3d;
+  --color-cream-900: #4c472e;
+
+  --color-offgray-50: #f1f2f4;
+  --color-offgray-100: #dddfe4;
+  --color-offgray-200: #c6cad2;
+  --color-offgray-300: #b8bdc7;
+  --color-offgray-400: #98a0ae;
+  --color-offgray-500: #818b9c;
+  --color-offgray-600: #6c7689;
+  --color-offgray-700: #5a6372;
+  --color-offgray-800: #4c5461;
+  --color-offgray-900: #363b45;
+  --color-offgray-950: #22252b;
+  --color-offgray-1000: #0b0c0e;
+
+  --color-neutral: #f6f4ef;
+  --color-accent-blue: #0751cf;
+  --color-accent-blue-dark: hsl(219, 93%, 35%);
+
+  --animate-blink: blink 1s step-end infinite;
+  --animate-dialogOverlayShow: dialogOverlayShow 0.15s
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-dialogContentShow: dialogContentShow 0.15s
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-scaleIn: scaleIn 0.1s ease;
+  --animate-scaleOut: scaleOut 0.1s ease;
+  --animate-fadeIn: fadeIn 0.1s ease;
+  --animate-fadeOut: fadeOut 0.1s ease;
+  --animate-marquee: marquee 55s linear infinite;
+
+  @keyframes blink {
+    0%,
+    to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes dialogOverlayShow {
+    0% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes dialogContentShow {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(-10deg) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: rotateX(0) scale(1);
+    }
+  }
+
+  @keyframes scaleOut {
+    0% {
+      opacity: 1;
+      transform: rotateX(0) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: rotateX(-10deg) scale(0.95);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(calc(-100% - 1rem));
+    }
+  }
+}
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @apply m-0 font-sans text-offgray-800 font-medium;
+    @apply bg-cream-50;
+
+    @variant dark {
+      @apply bg-offgray-1000;
+      @apply text-offgray-300;
+    }
+
+    @variant 2xl {
+      @apply text-md;
+    }
+  }
+
+  a {
+    @apply text-accent-blue;
+
+    @variant hover {
+      @apply underline text-accent-blue-dark;
+      text-decoration-thickness: 0.1em;
+    }
+
+    @variant dark {
+      @apply text-blue-300;
+
+      @variant hover {
+        @apply text-blue-200;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    border: 1px solid;
+    border-radius: 8px;
+    overflow: clip;
+
+    @apply bg-offgray-50 border-offgray-100;
+
+    @variant dark {
+      @apply bg-offgray-1000 border-offgray-900;
+    }
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  code {
+    @apply -mx-0.5 py-0.5 px-1 rounded-sm;
+    @apply font-mono text-sm [overflow-wrap:_break-word];
+    @apply bg-accent-blue/10 dark:bg-blue-400/10 text-black dark:text-white;
+  }
+
+  pre {
+    @apply relative border bg-white border-accent-blue/30;
+
+    @variant dark {
+      @apply bg-offgray-1000 border-blue-300/30;
+    }
+
+    code {
+      all: initial;
+      direction: ltr !important;
+
+      @apply block font-mono font-medium text-sm p-2 text-offgray-900;
+
+      @variant dark {
+        @apply text-offgray-100;
+      }
+    }
+  }
+
+  .heading1 {
+    @apply font-semibold text-2xl tracking-tight whitespace-pre-wrap;
+    @apply text-accent-blue;
+
+    @apply mt-8 mb-4;
+
+    @variant dark {
+      @apply text-blue-300;
+    }
+
+    @variant md {
+      @apply text-3xl;
+    }
+  }
+
+  .heading2 {
+    @apply font-semibold text-xl tracking-tight whitespace-pre-wrap;
+    @apply text-accent-blue;
+
+    @apply mt-8 mb-4;
+
+    @variant dark {
+      @apply text-blue-300;
+    }
+
+    @variant md {
+      @apply text-2xl;
+    }
+  }
+}
+
+.special {
+  --fancy-gradient: linear-gradient(
+    110deg,
+    oklch(73.67% 0.16 242.66) 0%,
+    oklch(70.08% 0.1692 273.26) 17%,
+    oklch(73.82% 0.217 314.78) 25%,
+    oklch(72.65% 0.266 347.16) 31%,
+    oklch(63.94% 0.2878 10.94) 37%,
+    oklch(65% 0.2887 23.17) 42%,
+    oklch(68.15% 0.2638 33.95) 47%,
+    oklch(71.67% 0.2268 46.4) 53%,
+    oklch(75.88% 0.2029 60.21) 58%,
+    oklch(76.87% 0.2067 58.66) 63%,
+    oklch(73.13% 0.216 12.8) 69%,
+    oklch(76.15% 0.2513 341.06) 75%,
+    oklch(74.32% 0.1583 292.41) 83%,
+    oklch(73.67% 0.16 242.66) 100%
+  );
+
+  background: var(--fancy-gradient);
+  background-clip: text;
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  animation: move-gradient 2s linear infinite reverse;
+}
+
+@keyframes move-gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
