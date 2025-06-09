@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
   return (
-    <main className="flex flex-col gap-6">
+    <main className="flex flex-col">
       <p>
         Jonah Möller is the Chief of Staff to the CTO at{" "}
         <a
