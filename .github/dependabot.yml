@@ -4,12 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    reviewers:
-      - "snapsnapturtle"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    reviewers:
-      - "snapsnapturtle"
