@@ -33,7 +33,7 @@
     "typescript": "^5.7.2",
     "vite": "^6.1.0",
     "vitest": "^3.2.3",
-    "web-vitals": "^4.2.4"
+    "web-vitals": "^5.0.2"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
