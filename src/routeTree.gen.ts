@@ -8,65 +8,34 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as ThoughtsIndexRouteImport } from './routes/thoughts/index'
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as ThoughtsIndexImport } from './routes/thoughts/index'
-
-// Create/Update Routes
-
-const IndexRoute = IndexImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const ThoughtsIndexRoute = ThoughtsIndexImport.update({
+const ThoughtsIndexRoute = ThoughtsIndexRouteImport.update({
   id: '/thoughts/',
   path: '/thoughts/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-// Populate the FileRoutesByPath interface
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/thoughts/': {
-      id: '/thoughts/'
-      path: '/thoughts'
-      fullPath: '/thoughts'
-      preLoaderRoute: typeof ThoughtsIndexImport
-      parentRoute: typeof rootRoute
-    }
-  }
-}
-
-// Create and export the route tree
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/thoughts': typeof ThoughtsIndexRoute
 }
-
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/thoughts': typeof ThoughtsIndexRoute
 }
-
 export interface FileRoutesById {
-  __root__: typeof rootRoute
+  __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/thoughts/': typeof ThoughtsIndexRoute
 }
-
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/thoughts'
@@ -75,37 +44,34 @@ export interface FileRouteTypes {
   id: '__root__' | '/' | '/thoughts/'
   fileRoutesById: FileRoutesById
 }
-
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ThoughtsIndexRoute: typeof ThoughtsIndexRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thoughts/': {
+      id: '/thoughts/'
+      path: '/thoughts'
+      fullPath: '/thoughts'
+      preLoaderRoute: typeof ThoughtsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ThoughtsIndexRoute: ThoughtsIndexRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/thoughts/"
-      ]
-    },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/thoughts/": {
-      "filePath": "thoughts/index.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */
