@@ -28,7 +28,7 @@
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.2",
     "jsdom": "^26.0.0",
-    "lint-staged": "^16.1.5",
+    "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.3",
