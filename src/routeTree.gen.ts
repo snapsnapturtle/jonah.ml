@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ThoughtsIndexRouteImport } from './routes/thoughts/index'
+import { Route as ThoughtsReLevelingAnEngineeringOrgRouteImport } from './routes/thoughts/re-leveling-an-engineering-org'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,44 @@ const ThoughtsIndexRoute = ThoughtsIndexRouteImport.update({
   path: '/thoughts/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ThoughtsReLevelingAnEngineeringOrgRoute =
+  ThoughtsReLevelingAnEngineeringOrgRouteImport.update({
+    id: '/thoughts/re-leveling-an-engineering-org',
+    path: '/thoughts/re-leveling-an-engineering-org',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/thoughts/re-leveling-an-engineering-org': typeof ThoughtsReLevelingAnEngineeringOrgRoute
   '/thoughts': typeof ThoughtsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/thoughts/re-leveling-an-engineering-org': typeof ThoughtsReLevelingAnEngineeringOrgRoute
   '/thoughts': typeof ThoughtsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/thoughts/re-leveling-an-engineering-org': typeof ThoughtsReLevelingAnEngineeringOrgRoute
   '/thoughts/': typeof ThoughtsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/thoughts'
+  fullPaths: '/' | '/thoughts/re-leveling-an-engineering-org' | '/thoughts'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/thoughts'
-  id: '__root__' | '/' | '/thoughts/'
+  to: '/' | '/thoughts/re-leveling-an-engineering-org' | '/thoughts'
+  id:
+    | '__root__'
+    | '/'
+    | '/thoughts/re-leveling-an-engineering-org'
+    | '/thoughts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ThoughtsReLevelingAnEngineeringOrgRoute: typeof ThoughtsReLevelingAnEngineeringOrgRoute
   ThoughtsIndexRoute: typeof ThoughtsIndexRoute
 }
 
@@ -65,11 +80,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThoughtsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/thoughts/re-leveling-an-engineering-org': {
+      id: '/thoughts/re-leveling-an-engineering-org'
+      path: '/thoughts/re-leveling-an-engineering-org'
+      fullPath: '/thoughts/re-leveling-an-engineering-org'
+      preLoaderRoute: typeof ThoughtsReLevelingAnEngineeringOrgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ThoughtsReLevelingAnEngineeringOrgRoute:
+    ThoughtsReLevelingAnEngineeringOrgRoute,
   ThoughtsIndexRoute: ThoughtsIndexRoute,
 }
 export const routeTree = rootRouteImport
