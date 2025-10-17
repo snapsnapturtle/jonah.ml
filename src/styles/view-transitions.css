@@ -1,4 +1,7 @@
 @theme {
+  --animate-pageIn: 240ms cubic-bezier(0.16, 1, 0.3, 1) both pageIn;
+  --animate-pageOut: 80ms cubic-bezier(0.16, 1, 0.3, 1) both pageOut;
+
   @keyframes pageIn {
     from {
       opacity: 0;
@@ -14,12 +17,10 @@
   @keyframes pageOut {
     from {
       opacity: 1;
-      transform: translateY(0);
     }
 
     to {
       opacity: 0;
-      transform: translateY(-2px);
     }
   }
 }
@@ -27,12 +28,12 @@
 @layer base {
   html:active-view-transition-type(fade) {
     &::view-transition-new(main-content) {
-      animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both pageIn;
+      @apply animate-pageIn;
       animation-delay: 60ms;
     }
 
     &::view-transition-old(main-content) {
-      animation: 120ms cubic-bezier(0.16, 1, 0.3, 1) both pageOut;
+      @apply animate-pageOut;
     }
   }
 }
