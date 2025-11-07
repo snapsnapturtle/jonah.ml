@@ -18,7 +18,7 @@
     "@tanstack/router-plugin": "^1.134.14",
     "react": "^19.0.0",
     "react-dom": "^19.2.0",
-    "tailwindcss": "^4.1.16"
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
     "@tanstack/eslint-config": "^0.3.2",
