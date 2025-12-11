@@ -9,18 +9,13 @@ function RouteComponent() {
   return (
     <main className="flex flex-col">
       <p>
-        Jonah Möller is the Chief of Staff to the CTO at{" "}
-        <a
-          href="//www.schuettflix.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Schüttflix
+        Jonah Möller is an Engineering Manager at{" "}
+        <a href="//www.goflink.com/" target="_blank" rel="noreferrer noopener">
+          Flink
         </a>
-        , a scale-up in the construction industry, with a focus on building and
-        marketplace for (recycled) materials. The technologies he works with the
-        most are Kotlin with Spring and React in TypeScript and recently has
-        taken an interest in learning Go.
+        , an online supermarket that delivers high-quality and fresh groceries
+        to your door in minutes. The technologies he works with the most are Go
+        and Kotlin, as well as React with TypeScript.
       </p>
       <p>
         Apart from work-related projects, he enjoys playing the piano,{" "}
