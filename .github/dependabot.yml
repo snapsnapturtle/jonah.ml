@@ -9,6 +9,10 @@ updates:
         patterns:
           - "@tanstack/react-router"
           - "@tanstack/router-plugin"
+      vite:
+        patterns:
+          - "vite"
+          - "@vitejs/plugin-react"
 
   - package-ecosystem: "github-actions"
     directory: "/"

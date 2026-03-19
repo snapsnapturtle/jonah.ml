@@ -25,7 +25,7 @@ const ThoughtsIndexRoute = ThoughtsIndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/thoughts': typeof ThoughtsIndexRoute
+  '/thoughts/': typeof ThoughtsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -38,7 +38,7 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/thoughts'
+  fullPaths: '/' | '/thoughts/'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/thoughts'
   id: '__root__' | '/' | '/thoughts/'
@@ -61,7 +61,7 @@ declare module '@tanstack/react-router' {
     '/thoughts/': {
       id: '/thoughts/'
       path: '/thoughts'
-      fullPath: '/thoughts'
+      fullPath: '/thoughts/'
       preLoaderRoute: typeof ThoughtsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
