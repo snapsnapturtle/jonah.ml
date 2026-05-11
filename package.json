@@ -13,7 +13,7 @@
     "check": "prettier --write . && eslint --fix"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
+    "@tailwindcss/vite": "^4.3.0",
     "@tanstack/react-router": "^1.169.2",
     "@tanstack/router-plugin": "^1.167.35",
     "react": "^19.2.5",
